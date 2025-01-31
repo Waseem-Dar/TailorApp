@@ -42,7 +42,7 @@ class OrderScreenWidget extends StatelessWidget {
                         color: AppColors.grey2.withOpacity(0.2),
                         child: Icon(
                           Icons.error,
-                          color: Colors.red,
+                          color:  AppColors.red,
                         )),
                   ),
                 ),
