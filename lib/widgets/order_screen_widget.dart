@@ -20,6 +20,9 @@ class OrderScreenWidget extends StatelessWidget {
             surfaceTintColor: AppColors.white,
             color: AppColors.white,
             child: GFListTile(
+              onTap: () {
+
+              },
                 padding: EdgeInsets.only(right: 10),
                 margin: EdgeInsets.zero,
                 avatar: Container(

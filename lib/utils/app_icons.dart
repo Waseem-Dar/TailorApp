@@ -13,4 +13,6 @@ class AppIcons{
   static String profileIcon = "assets/images/profile.png";
   static String notificationIcon = "assets/images/bell-1.png";
   static String searchIcon = "assets/images/searchIcon.png";
+  static String maleIcon = "assets/images/male.png";
+  static String femaleIcon = "assets/images/female.png";
 }

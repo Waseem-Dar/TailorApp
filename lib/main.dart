@@ -7,12 +7,13 @@ import 'package:tailor_book/view/tab_screen.dart';
 void main() {
   runApp(const MyApp());
 }
-
+late  Size mq ;
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    mq = MediaQuery.of(context).size;
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',

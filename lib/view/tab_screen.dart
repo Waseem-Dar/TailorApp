@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
+import 'package:tailor_book/view/add_client_screen.dart';
 import 'package:tailor_book/view/gallery_screen.dart';
 import 'package:tailor_book/view/order_screen.dart';
 import 'package:tailor_book/view/profile_screen.dart';
@@ -42,7 +43,9 @@ class _TabScreenState extends State<TabScreen> {
       resizeToAvoidBottomInset: false,
       body: _tabs[_bottomNavIndex], //destination screen
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => AddClientScreen(),));
+        },
         backgroundColor: AppColors.primaryColor2,
         shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),

@@ -89,6 +89,10 @@ class _UserScreenState extends State<UserScreen> {
               child: Column(
                 children: [
                   ListTile(
+                    tileColor: AppColors.background,
+                    onTap: () {
+
+                    },
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 5, horizontal: 16),
                     leading: Container(
@@ -168,7 +172,6 @@ class _UserScreenState extends State<UserScreen> {
           actions: [
             TextButton(
                 onPressed: (){
-                  // AppList.addressesList.removeAt(index);
                   Navigator.pop(context,true);
                 }, child: Text("Yes",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 15,color: AppColors.red),)),
             SizedBox(height:50,child: VerticalDivider(color: const Color(0xFF939393).withOpacity(0.29),width: 1,endIndent: 15,)),
