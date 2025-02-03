@@ -74,40 +74,40 @@ class AppWidgets {
   }
 
 
-  static Widget newClientImagesCard(String text,String image,VoidCallback onTap){
-    return InkWell(
-      onTap:onTap,
-      child: Container(
-        width: mq.width/2-36,
-        height: 130,
-        clipBehavior: Clip.hardEdge,
-        decoration: BoxDecoration(
-            color:AppColors.white,
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [BoxShadow(
-                color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
-            )]
-        ),
-        child: Column(
-          spacing: 10,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              height: 90,
-              width: double.infinity,
-              decoration: BoxDecoration(
-              color: AppColors.grey2.withOpacity(0.3),
-                image: DecorationImage(image: NetworkImage("https://toppng.com/uploads/preview/add-camera-icon-icon-add-11553485583calilemiyg.png"))
-              ),
-              // child:Image.network(image,fit: BoxFit.cover,),
-            ),
-            // ImageIcon( AssetImage(icon),size: 29,color: value?AppColors.white:AppColors.primaryColor2 ,),
-            Text(text,style: GoogleFonts.poppins(fontSize:15,fontWeight:FontWeight.w500,color:AppColors.black)),
-
-          ],
-        ),
-      ),
-    );
-  }
+  // static Widget newClientImagesCard(String text,String image,VoidCallback onTap){
+  //   return InkWell(
+  //     onTap:onTap,
+  //     child: Container(
+  //       width: mq.width/2-36,
+  //       height: 130,
+  //       clipBehavior: Clip.hardEdge,
+  //       decoration: BoxDecoration(
+  //           color:AppColors.white,
+  //           borderRadius: BorderRadius.circular(10),
+  //           boxShadow: [BoxShadow(
+  //               color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
+  //           )]
+  //       ),
+  //       child: Column(
+  //         spacing: 10,
+  //         mainAxisAlignment: MainAxisAlignment.start,
+  //         children: [
+  //           Container(
+  //             height: 90,
+  //             width: double.infinity,
+  //             decoration: BoxDecoration(
+  //             color: AppColors.grey2.withOpacity(0.3),
+  //               image: DecorationImage(image: NetworkImage("https://toppng.com/uploads/preview/add-camera-icon-icon-add-11553485583calilemiyg.png"))
+  //             ),
+  //              child:Image.network(image,fit: BoxFit.cover,),
+  //           ),
+  //            ImageIcon( AssetImage(icon),size: 29,color: value?AppColors.white:AppColors.primaryColor2 ,),
+  //           Text(text,style: GoogleFonts.poppins(fontSize:15,fontWeight:FontWeight.w500,color:AppColors.black)),
+  //
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 
 }

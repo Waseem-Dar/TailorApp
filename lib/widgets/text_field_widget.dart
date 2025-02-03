@@ -25,9 +25,6 @@ class TextFieldWidget extends StatelessWidget {
               color: AppColors.grey1,
               fontWeight: FontWeight.w400),
           contentPadding: EdgeInsets.fromLTRB(15, 5, 15, 5),
-          border: UnderlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
           enabledBorder: OutlineInputBorder(
               borderSide:
               BorderSide(color: AppColors.grey2, width: 1),
