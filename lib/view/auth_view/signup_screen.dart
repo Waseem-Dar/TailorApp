@@ -8,6 +8,8 @@ import '../../utils/app_color.dart';
 import '../../widgets/app_widgets.dart';
 
 class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
+
   @override
   State<SignupScreen> createState() => _SignupScreenState();
 }
