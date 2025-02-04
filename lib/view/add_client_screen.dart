@@ -1,8 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_book/data/cloth_measurement_list.dart';
 import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/widgets/date_picker_field.dart';
+import 'package:tailor_book/widgets/measurement_field.dart';
 import 'package:tailor_book/widgets/text_field_widget.dart';
 
 import '../utils/app_color.dart';
@@ -23,6 +27,9 @@ class _AddClientScreenState extends State<AddClientScreen> {
   bool isSwitched = false;
 
   int? selectedIndex;
+
+  String? selectedClothing;
+  List<String> measurementFields = [];
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +113,7 @@ class _AddClientScreenState extends State<AddClientScreen> {
             SizedBox(
               height: 140,
               child: ListView.builder(
-                itemCount: 10,
+                itemCount: clothName.length,
                 padding: EdgeInsets.only(left: 19, right: 19),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
@@ -115,6 +122,12 @@ class _AddClientScreenState extends State<AddClientScreen> {
                     onTap: () {
                       setState(() {
                         selectedIndex = index; // Update selected item
+                        selectedClothing = clothName[selectedIndex!];
+                        // Find the selected clothing item and update measurement fields
+                        measurementFields = clothingItems
+                            .firstWhere((item) => item.name == selectedClothing)
+                            .measurements;
+                        print(measurementFields); // Log the measurement fields
                       });
                     },
                     child: Padding(
@@ -144,7 +157,7 @@ class _AddClientScreenState extends State<AddClientScreen> {
                                   color: AppColors.background,
                                   borderRadius: BorderRadius.circular(50)),
                             ),
-                            Text("Shirt",
+                            Text(clothName[index],
                                 style: GoogleFonts.poppins(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500,
@@ -214,7 +227,44 @@ class _AddClientScreenState extends State<AddClientScreen> {
                         ),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Divider(
+                    thickness: 2,
+                    height: 0,
+                  ),
+                  AppWidgets.labelText1("Add Measurement:"),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(14,0,14,14),
+                    decoration: BoxDecoration(
+                        color: AppColors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [BoxShadow(
+                            color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
+                        )]
+                    ),
+                    child:Column(
+                      spacing: 15,
+                      children: measurementFields.map((measurement){
+                        return MeasurementField(itemName: measurement);
+                      }).toList(),
+                      // children: [
+                      //   MeasurementField(itemName: "Collor"),
+                      //   MeasurementField(itemName: "Collor"),
+                      //   MeasurementField(itemName: "Collor"),
+                      //   MeasurementField(itemName: "Collor"),
+                      //   MeasurementField(itemName: "Collor"),
+                      //   MeasurementField(itemName: "Collor"),
+                      //   MeasurementField(itemName: "Collor"),
+                      // ],
+                    ),
                   )
+
+
+
+
                 ],
               ),
             ),
