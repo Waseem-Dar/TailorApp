@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../utils/app_color.dart';
+
 class MeasurementField extends StatefulWidget {
   final String itemName;
   const MeasurementField({super.key, required this.itemName});
@@ -16,12 +18,12 @@ class _MeasurementFieldState extends State<MeasurementField> {
       textBaseline: TextBaseline.ideographic,
       crossAxisAlignment: CrossAxisAlignment.baseline,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      spacing: 10,
+      spacing: 15,
       children: [
         Expanded(child: Text(widget.itemName,style: GoogleFonts.poppins(fontSize: 17),)),
         SizedBox(
           height: 36,
-          width: 100,
+          width: 85,
           child: TextFormField(
             keyboardType:  TextInputType.number,
             decoration: InputDecoration(

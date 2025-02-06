@@ -74,40 +74,54 @@ class AppWidgets {
   }
 
 
-  // static Widget newClientImagesCard(String text,String image,VoidCallback onTap){
-  //   return InkWell(
-  //     onTap:onTap,
-  //     child: Container(
-  //       width: mq.width/2-36,
-  //       height: 130,
-  //       clipBehavior: Clip.hardEdge,
-  //       decoration: BoxDecoration(
-  //           color:AppColors.white,
-  //           borderRadius: BorderRadius.circular(10),
-  //           boxShadow: [BoxShadow(
-  //               color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
-  //           )]
-  //       ),
-  //       child: Column(
-  //         spacing: 10,
-  //         mainAxisAlignment: MainAxisAlignment.start,
-  //         children: [
-  //           Container(
-  //             height: 90,
-  //             width: double.infinity,
-  //             decoration: BoxDecoration(
-  //             color: AppColors.grey2.withOpacity(0.3),
-  //               image: DecorationImage(image: NetworkImage("https://toppng.com/uploads/preview/add-camera-icon-icon-add-11553485583calilemiyg.png"))
-  //             ),
-  //              child:Image.network(image,fit: BoxFit.cover,),
-  //           ),
-  //            ImageIcon( AssetImage(icon),size: 29,color: value?AppColors.white:AppColors.primaryColor2 ,),
-  //           Text(text,style: GoogleFonts.poppins(fontSize:15,fontWeight:FontWeight.w500,color:AppColors.black)),
-  //
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
+  static Widget addressTextFieldWidget(){
+    return SizedBox(
+      height: 110,
+      child: TextFormField(
+
+        minLines: 5,
+        maxLines: 5,
+
+        style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color:AppColors.primaryColor2 ),
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.fromLTRB(15, 0, 15, 5),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(23),
+            borderSide: BorderSide(width: 1, color: AppColors.primaryColor2),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(23),
+            borderSide: BorderSide(width: 1, color: AppColors.grey2),
+          ),
+        ),
+      ),
+    );
+  }
+
+
+  static Widget paymentField(String text){
+    return Row(
+      textBaseline: TextBaseline.ideographic,
+      crossAxisAlignment: CrossAxisAlignment.baseline,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      spacing: 10,
+      children: [
+        Expanded(child: Text(text,style: GoogleFonts.poppins(fontSize: 17),)),
+        SizedBox(
+          height: 36,
+          width: 100,
+          child: TextFormField(
+            keyboardType:  TextInputType.number,
+            decoration: InputDecoration(
+                hintText: "Rs",
+                border: UnderlineInputBorder(
+
+                )
+            ),
+          ),
+        )
+      ],
+    );
+  }
 
 }

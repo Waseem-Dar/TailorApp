@@ -121,13 +121,11 @@ class _AddClientScreenState extends State<AddClientScreen> {
                   return GestureDetector(
                     onTap: () {
                       setState(() {
-                        selectedIndex = index; // Update selected item
+                        selectedIndex = index;
                         selectedClothing = clothName[selectedIndex!];
-                        // Find the selected clothing item and update measurement fields
                         measurementFields = clothingItems
                             .firstWhere((item) => item.name == selectedClothing)
                             .measurements;
-                        print(measurementFields); // Log the measurement fields
                       });
                     },
                     child: Padding(
@@ -212,9 +210,11 @@ class _AddClientScreenState extends State<AddClientScreen> {
                     height: 5,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween, // Adjust spacing
+                    mainAxisAlignment:
+                        MainAxisAlignment.spaceBetween, // Adjust spacing
                     children: [
-                      Text("Mark as Urgent", style: GoogleFonts.poppins(fontSize: 15)),
+                      Text("Mark as Urgent",
+                          style: GoogleFonts.poppins(fontSize: 15)),
                       Transform.scale(
                         scale: 0.8,
                         child: Switch(
@@ -237,39 +237,67 @@ class _AddClientScreenState extends State<AddClientScreen> {
                   ),
                   AppWidgets.labelText1("Add Measurement:"),
                   Container(
-                    padding: EdgeInsets.fromLTRB(14,0,14,14),
+                    padding: EdgeInsets.fromLTRB(14, 5, 14, 25),
                     decoration: BoxDecoration(
                         color: AppColors.white,
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [BoxShadow(
-                            color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
-                        )]
-                    ),
-                    child:Column(
+                        boxShadow: [
+                          BoxShadow(
+                              color: AppColors.black.withOpacity(0.1),
+                              offset: const Offset(0, 4),
+                              blurRadius: 11.199999809265137)
+                        ]),
+                    child: Column(
                       spacing: 15,
-                      children: measurementFields.map((measurement){
+                      children: measurementFields.map((measurement) {
                         return MeasurementField(itemName: measurement);
                       }).toList(),
-                      // children: [
-                      //   MeasurementField(itemName: "Collor"),
-                      //   MeasurementField(itemName: "Collor"),
-                      //   MeasurementField(itemName: "Collor"),
-                      //   MeasurementField(itemName: "Collor"),
-                      //   MeasurementField(itemName: "Collor"),
-                      //   MeasurementField(itemName: "Collor"),
-                      //   MeasurementField(itemName: "Collor"),
-                      // ],
                     ),
-                  )
-
-
-
-
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Divider(
+                    thickness: 2,
+                    height: 0,
+                  ),
+                  AppWidgets.labelText1("Special Instructions:"),
+                  AppWidgets.addressTextFieldWidget(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Divider(
+                    thickness: 2,
+                    height: 0,
+                  ),
+                  AppWidgets.labelText1("Payment Status:"),
+                  Container(
+                      padding: EdgeInsets.fromLTRB(14, 5, 14, 25),
+                      decoration: BoxDecoration(
+                          color: AppColors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                                color: AppColors.black.withOpacity(0.1),
+                                offset: const Offset(0, 4),
+                                blurRadius: 11.199999809265137)
+                          ]),
+                      child: Column(
+                        children: [
+                          AppWidgets.paymentField("Total Amount"),
+                          AppWidgets.paymentField("Advanced Amount"),
+                          AppWidgets.paymentField("Due Amount"),
+                        ],
+                      )),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  AppWidgets.mainButton("Add", () {}),
+                  SizedBox(
+                    height: 30,
+                  ),
                 ],
               ),
-            ),
-            SizedBox(
-              height: 130,
             ),
           ],
         ),
