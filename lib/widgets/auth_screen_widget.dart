@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tailor_book/utils/app_color.dart';
 
+import '../utils/app_icons.dart';
+
 class AuthScreenWidget extends StatelessWidget {
   final Widget child;
   const AuthScreenWidget({super.key, required this.child});
@@ -22,12 +24,12 @@ class AuthScreenWidget extends StatelessWidget {
               )
             ),
             child: Center(
-              child: Text("LOGO",style: TextStyle(fontWeight: FontWeight.w600,color: AppColors.white,fontSize: 40),),
+              child:  Image.asset(AppIcons.logoIcon,width: 150,),
             ),
           ),
         ),
          child
-      ],
+      ], 
     );
   }
 }
@@ -47,8 +49,6 @@ class CustomClipPath extends CustomClipper<Path>{
     path.lineTo(w, 0);
     path.close();
 
-
-
     return path;
   }
 
@@ -57,4 +57,4 @@ class CustomClipPath extends CustomClipper<Path>{
     return false;
   }
 
-}
+} 
