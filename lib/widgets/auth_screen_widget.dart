@@ -57,4 +57,4 @@ class CustomClipPath extends CustomClipper<Path>{
     return false;
   }
 
-} 
+}
