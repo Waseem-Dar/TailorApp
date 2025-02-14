@@ -102,6 +102,7 @@ class _OrderScreenState extends State<OrderScreen> {
                       unselectedLabelColor: AppColors.white.withOpacity(0.5),
                       indicatorColor: AppColors.white,
                       padding: EdgeInsets.zero,
+                      dividerHeight: 0,
                       tabs: [
                         Tab(
                           text: "Active",
