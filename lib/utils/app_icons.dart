@@ -15,6 +15,7 @@ class AppIcons{
   static String searchIcon = "assets/images/searchIcon.png";
   static String maleIcon = "assets/images/male.png";
   static String femaleIcon = "assets/images/female.png";
+  static String favoriteIcon = "assets/images/fav-outline.png";
   static String addImageIcon = "assets/images/addimage.png";
   static String logoIcon = "assets/images/logo.png";
   static String clothNetworkImage = "https://www.shutterstock.com/image-photo/stack-colorful-clothes-pile-clothing-600nw-2203081765.jpg";

@@ -167,7 +167,7 @@ class _UserScreenState extends State<UserScreen> {
               ),
             ],
           ),
-          actionsPadding:  EdgeInsets.zero,
+          // actionsPadding:  EdgeInsets.zero,
           actionsAlignment: MainAxisAlignment.spaceEvenly,
           actions: [
             TextButton(
@@ -175,7 +175,8 @@ class _UserScreenState extends State<UserScreen> {
                   Navigator.pop(context,true);
                 }, child: Text("Yes",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 15,color: AppColors.red),)),
             SizedBox(height:50,child: VerticalDivider(color: const Color(0xFF939393).withOpacity(0.29),width: 1,endIndent: 15,)),
-            TextButton(onPressed: (){
+            TextButton(
+                onPressed: (){
               Navigator.pop(context,false);
             }, child: Text("No",style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 15,color: const Color(0xFF5C90DC)),))
           ],

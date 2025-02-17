@@ -27,27 +27,30 @@ class OrderScreenWidget extends StatelessWidget {
                 margin: EdgeInsets.zero,
                 avatar: Container(
                   clipBehavior: Clip.hardEdge,
+                    width: 80,
+                    height: 80,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(12),
                           bottomLeft: Radius.circular(12))),
-                  child: CachedNetworkImage(
-                    imageUrl:
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
-                    width: 80,
-                    height: 80,
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) => Padding(
-                      padding: const EdgeInsets.all(25.0),
-                      child: CircularProgressIndicator(),
-                    ),
-                    errorWidget: (context, url, error) => Container(
-                        color: AppColors.grey2.withOpacity(0.2),
-                        child: Icon(
-                          Icons.error,
-                          color:  AppColors.red,
-                        )),
-                  ),
+                  child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",fit: BoxFit.cover,),
+                  // child: CachedNetworkImage(
+                  //   imageUrl:
+                  //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
+                  //   width: 80,
+                  //   height: 80,
+                  //   fit: BoxFit.cover,
+                  //   placeholder: (context, url) => Padding(
+                  //     padding: const EdgeInsets.all(25.0),
+                  //     child: CircularProgressIndicator(),
+                  //   ),
+                  //   errorWidget: (context, url, error) => Container(
+                  //       color: AppColors.grey2.withOpacity(0.2),
+                  //       child: Icon(
+                  //         Icons.error,
+                  //         color:  AppColors.red,
+                  //       )),
+                  // ),
                 ),
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 5),

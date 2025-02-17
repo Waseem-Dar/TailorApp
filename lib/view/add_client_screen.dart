@@ -231,12 +231,12 @@ class _AddClientScreenState extends State<AddClientScreen> {
                   SizedBox(
                     height: 20,
                   ),
-                  Divider(
+                  selectedIndex != null? Divider(
                     thickness: 2,
                     height: 0,
-                  ),
-                  AppWidgets.labelText1("Add Measurement:"),
-                  Container(
+                  ):SizedBox(),
+                  selectedIndex != null?AppWidgets.labelText1("Add Measurement:"):SizedBox(),
+                  selectedIndex != null?Container(
                     padding: EdgeInsets.fromLTRB(14, 5, 14, 25),
                     decoration: BoxDecoration(
                         color: AppColors.white,
@@ -253,7 +253,7 @@ class _AddClientScreenState extends State<AddClientScreen> {
                         return MeasurementField(itemName: measurement);
                       }).toList(),
                     ),
-                  ),
+                  ):SizedBox(),
                   SizedBox(
                     height: 20,
                   ),
