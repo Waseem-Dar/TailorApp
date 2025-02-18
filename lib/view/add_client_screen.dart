@@ -11,7 +11,7 @@ import 'package:tailor_book/widgets/text_field_widget.dart';
 
 import '../utils/app_color.dart';
 import '../widgets/app_widgets.dart';
-import '../widgets/new_client_images_card.dart';
+import '../widgets/cards/new_client_images_card.dart';
 
 class AddClientScreen extends StatefulWidget {
   const AddClientScreen({super.key});
@@ -228,9 +228,9 @@ class _AddClientScreenState extends State<AddClientScreen> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  selectedIndex != null?SizedBox(
                     height: 20,
-                  ),
+                  ):SizedBox(),
                   selectedIndex != null? Divider(
                     thickness: 2,
                     height: 0,

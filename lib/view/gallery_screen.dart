@@ -5,6 +5,7 @@ import 'package:tailor_book/data/cloth_images.dart';
 
 import '../utils/app_color.dart';
 import '../utils/app_icons.dart';
+import '../widgets/cards/gallery_item_card.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -31,7 +32,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
         ),
         automaticallyImplyLeading: false,
         actions: [
-
+                                                                            //Action Buttons
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
@@ -60,6 +61,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
             SizedBox(
               height: 24,
             ),
+                                                                     // ChoiceChip Filter
             Wrap(
               spacing: 8,
               alignment: WrapAlignment.center,
@@ -87,6 +89,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
             SizedBox(
               height: 24,
             ),
+                                                                 //Slider
             CarouselSlider(
               options: CarouselOptions(
                 height: 150,
@@ -121,20 +124,21 @@ class _GalleryScreenState extends State<GalleryScreen> {
                 );
               }).toList(),
             ),
+                                                                      //Grid Items
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 24),
               child: GridView.builder(
                 physics:  NeverScrollableScrollPhysics(),
                 shrinkWrap:true ,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 16.0,
-                  mainAxisSpacing: 16.0,
+                  crossAxisSpacing: 24.0,
+                  mainAxisSpacing: 24.0,
                   childAspectRatio: 1.0,
                 ),
                 itemCount: ClothImages.GridViewImages.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return GridItemCard(item: ClothImages.GridViewImages[index]);
+                  return GalleryItemCard(item: ClothImages.GridViewImages[index]);
                 },
               ),
             ),
@@ -147,45 +151,3 @@ class _GalleryScreenState extends State<GalleryScreen> {
 
 
 
-class GridItemCard extends StatelessWidget {
-  final String item;
-
-  const GridItemCard({super.key, required this.item});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      clipBehavior: Clip.hardEdge,
-      decoration: BoxDecoration(
-        color: AppColors.background,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            offset: const Offset(0, 4),
-            blurRadius: 11.2,
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: Image.network(
-              item,
-              fit: BoxFit.cover,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              "Hello",
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}

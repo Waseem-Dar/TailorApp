@@ -5,7 +5,7 @@ import 'dart:io';
 
 import 'package:tailor_book/utils/app_icons.dart';
 
-import '../utils/app_color.dart';
+import '../../utils/app_color.dart';
 
 class NewClientImagesCard extends StatefulWidget {
   final String text;

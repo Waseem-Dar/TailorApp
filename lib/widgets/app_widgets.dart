@@ -84,7 +84,7 @@ class AppWidgets {
 
         style: GoogleFonts.poppins(fontSize: 14, fontWeight: FontWeight.w400, color:AppColors.primaryColor2 ),
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.fromLTRB(15, 0, 15, 5),
+          contentPadding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(23),
             borderSide: BorderSide(width: 1, color: AppColors.primaryColor2),

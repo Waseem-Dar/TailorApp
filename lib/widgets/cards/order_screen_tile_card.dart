@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/components/list_tile/gf_list_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../utils/app_color.dart';
+import '../../utils/app_color.dart';
 
-class OrderScreenWidget extends StatelessWidget {
-  const OrderScreenWidget({super.key});
+class OrderScreenTileCard extends StatelessWidget {
+  const OrderScreenTileCard({super.key});
 
   @override
   Widget build(BuildContext context) {

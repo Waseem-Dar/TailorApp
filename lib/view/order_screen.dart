@@ -6,7 +6,7 @@ import 'package:tailor_book/utils/app_icons.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../widgets/order_screen_widget.dart';
+import '../widgets/cards/order_screen_tile_card.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});
@@ -129,12 +129,12 @@ class _OrderScreenState extends State<OrderScreen> {
           ),
           body: TabBarView(
             children: [
-              OrderScreenWidget(),
-              OrderScreenWidget(),
-              OrderScreenWidget(),
-              OrderScreenWidget(),
-              OrderScreenWidget(),
-              OrderScreenWidget(),
+              OrderScreenTileCard(),
+              OrderScreenTileCard(),
+              OrderScreenTileCard(),
+              OrderScreenTileCard(),
+              OrderScreenTileCard(),
+              OrderScreenTileCard(),
             ],
           )),
     );
