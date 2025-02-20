@@ -5,7 +5,8 @@ import 'package:intl/intl.dart';
 import '../utils/app_color.dart';
 
 class DatePickerField extends StatefulWidget {
-  const DatePickerField({super.key});
+  final bool isOrderDate;
+  const DatePickerField({super.key, required this.isOrderDate});
 
   @override
   State<DatePickerField> createState() => _DatePickerFieldState();
@@ -14,6 +15,10 @@ class DatePickerField extends StatefulWidget {
 class _DatePickerFieldState extends State<DatePickerField> {
   final TextEditingController _dateController = TextEditingController();
 
+
+
+
+
   // Function to show date picker
   Future<void> _selectDate(BuildContext context) async {
     DateTime? pickedDate = await showDatePicker(
@@ -21,6 +26,7 @@ class _DatePickerFieldState extends State<DatePickerField> {
       initialDate: DateTime.now(),
       firstDate: DateTime(2000),
       lastDate: DateTime(2100),
+
     );
 
     if (pickedDate != null) {
@@ -31,7 +37,26 @@ class _DatePickerFieldState extends State<DatePickerField> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    if (widget.isOrderDate) {
+      // Set the current date when isOrderDate is true
+      _setCurrentDate();
+    }
+  }
+
+  // Function to set the current date
+  void _setCurrentDate() {
+    final now = DateTime.now();
+    setState(() {
+      _dateController.text = DateFormat('dd-MM-yyyy').format(now);
+    });
+  }
+
+  @override
+
   Widget build(BuildContext context) {
+
     return SizedBox(
       height: 40,
       child: TextFormField(

@@ -1,7 +1,9 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/data/cloth_images.dart';
+import 'package:tailor_book/model/gallery_model.dart';
 
 import '../utils/app_color.dart';
 import '../utils/app_icons.dart';
@@ -15,19 +17,15 @@ class GalleryScreen extends StatefulWidget {
 }
 
 class _GalleryScreenState extends State<GalleryScreen> {
-
-  String _selectedChoice = '';
-  List choiceList = ["All","Men","Women"];
-
+double animateFrom=40;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.primaryColor2,
-        // surfaceTintColor: AppColors.background,
         elevation: 10,
         title: Text(
-          "TailorBook",
+          "Stitch Craft",
           style: GoogleFonts.poppins(color: AppColors.white),
         ),
         automaticallyImplyLeading: false,
@@ -61,35 +59,6 @@ class _GalleryScreenState extends State<GalleryScreen> {
             SizedBox(
               height: 24,
             ),
-                                                                     // ChoiceChip Filter
-            Wrap(
-              spacing: 8,
-              alignment: WrapAlignment.center,
-              children: choiceList.map((choice){
-                return ChoiceChip(
-                  backgroundColor: AppColors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-                  side: BorderSide.none,
-                  showCheckmark: false,
-                  selectedColor: AppColors.primaryColor2,
-                  labelStyle: GoogleFonts.poppins(fontSize:16,fontWeight:FontWeight.w500,
-                      color:_selectedChoice == choice?Colors.white:Colors.black),
-                  label: SizedBox(
-                      width: 70,
-                      child: Center(child: Text(choice))),
-                  selected: _selectedChoice == choice,
-                  onSelected: (selected) {
-                    setState(() {
-                      _selectedChoice = selected ? choice : '';
-                    });
-                  },
-                );
-              }).toList(),
-            ),
-            SizedBox(
-              height: 24,
-            ),
-                                                                 //Slider
             CarouselSlider(
               options: CarouselOptions(
                 height: 150,
@@ -136,9 +105,10 @@ class _GalleryScreenState extends State<GalleryScreen> {
                   mainAxisSpacing: 24.0,
                   childAspectRatio: 1.0,
                 ),
-                itemCount: ClothImages.GridViewImages.length,
+                itemCount: ClothImages.galleryItems.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return GalleryItemCard(item: ClothImages.GridViewImages[index]);
+                  final item = ClothImages.galleryItems[index];
+                  return GalleryItemCard(item: GalleryModel(image:item["image"]! , name: item["name"]!),index: index,);
                 },
               ),
             ),

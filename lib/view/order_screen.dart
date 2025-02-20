@@ -28,7 +28,7 @@ class _OrderScreenState extends State<OrderScreen> {
             backgroundColor: AppColors.primaryColor2,
             surfaceTintColor: Colors.transparent,
             title: Text(
-              "TailorBook",
+              "Stitch Craft",
               style: GoogleFonts.poppins(color: AppColors.white),
             ),
             automaticallyImplyLeading: false,

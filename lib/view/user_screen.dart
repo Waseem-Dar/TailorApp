@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,7 +24,7 @@ class _UserScreenState extends State<UserScreen> {
           backgroundColor: AppColors.primaryColor2,
           surfaceTintColor: Colors.transparent,
           title: Text(
-            "TailorBook",
+            "Stitch Craft",
             style: GoogleFonts.poppins(color: AppColors.white),
           ),
           automaticallyImplyLeading: false,

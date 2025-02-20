@@ -202,10 +202,10 @@ class _AddClientScreenState extends State<AddClientScreen> {
                     height: 0,
                   ),
                   AppWidgets.labelText1("Set Dates:"),
+                  AppWidgets.labelText("Order Date"),
+                  DatePickerField(isOrderDate: true,),
                   AppWidgets.labelText("Delivery Date"),
-                  DatePickerField(),
-                  AppWidgets.labelText("Remind Date"),
-                  DatePickerField(),
+                  DatePickerField(isOrderDate: false,),
                   SizedBox(
                     height: 5,
                   ),
