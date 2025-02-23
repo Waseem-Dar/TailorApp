@@ -18,6 +18,9 @@ class AppIcons{
   static String favoriteIcon = "assets/images/fav-outline.png";
   static String addImageIcon = "assets/images/addimage.png";
   static String logoIcon = "assets/images/logo.png";
+  static String chatIcon = "assets/images/bubble-chat.png";
+  static String telephoneIcon = "assets/images/telephone.png";
+  static String whatsappIcon = "assets/images/whatsapp.png";
   static String clothNetworkImage = "https://www.shutterstock.com/image-photo/stack-colorful-clothes-pile-clothing-600nw-2203081765.jpg";
   static String clientNetworkImage = "https://www.saeedajmalstores.com/cdn/shop/files/Men-Wash-n-wear-Kameez-Shalwar-Navy-1_400x.jpg?v=1731903187";
 

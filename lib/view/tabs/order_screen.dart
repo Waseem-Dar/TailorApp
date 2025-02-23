@@ -6,7 +6,7 @@ import 'package:tailor_book/utils/app_icons.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../widgets/cards/order_screen_tile_card.dart';
+import '../../widgets/cards/order_screen_tile_card.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});

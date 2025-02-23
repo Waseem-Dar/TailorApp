@@ -5,9 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/data/cloth_images.dart';
 import 'package:tailor_book/model/gallery_model.dart';
 
-import '../utils/app_color.dart';
-import '../utils/app_icons.dart';
-import '../widgets/cards/gallery_item_card.dart';
+import '../../utils/app_color.dart';
+import '../../utils/app_icons.dart';
+import '../../widgets/cards/gallery_item_card.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});

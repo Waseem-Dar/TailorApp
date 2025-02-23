@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/view/auth_view/choice_screen.dart';
 import 'package:tailor_book/view/auth_view/login_screen.dart';
-import 'package:tailor_book/view/gallery_screen.dart';
+import 'package:tailor_book/view/tabs/gallery_screen.dart';
 import 'package:tailor_book/view/splash_screen.dart';
 import 'package:tailor_book/view/tab_screen.dart';
+import 'package:tailor_book/view/tabs/users_screen.dart';
+import 'package:tailor_book/view/user_details_screen.dart';
 
 void main() {
   runApp(const MyApp());

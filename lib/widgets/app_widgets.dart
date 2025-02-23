@@ -124,4 +124,22 @@ class AppWidgets {
     );
   }
 
+
+  static Widget ClientContactWidget(String icon,double padding,VoidCallback onTap){
+    return   InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 35,
+        width: 35,
+        padding: EdgeInsets.all(padding),
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(color: AppColors.whiteGrey,width: 1,)
+        ),
+        child: ImageIcon(AssetImage(icon),color: AppColors.whiteGrey,),
+      ),
+    );
+  }
+
+
 }

@@ -6,16 +6,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
+import 'package:tailor_book/view/user_details_screen.dart';
 
-class UserScreen extends StatefulWidget {
-  const UserScreen({super.key});
+class UsersScreen extends StatefulWidget {
+  const UsersScreen({super.key});
 
   @override
-  State<UserScreen> createState() => _UserScreenState();
+  State<UsersScreen> createState() => _UsersScreenState();
 }
 List   list = [1,2,3,4,5,6,7,8,9,9,10,11,12,13,14,15];
 
-class _UserScreenState extends State<UserScreen> {
+class _UsersScreenState extends State<UsersScreen> {
   bool isSearch = false;
   @override
   Widget build(BuildContext context) {
@@ -92,7 +93,7 @@ class _UserScreenState extends State<UserScreen> {
                   ListTile(
                     tileColor: AppColors.background,
                     onTap: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => UserDetailsScreen(),));
                     },
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 5, horizontal: 16),

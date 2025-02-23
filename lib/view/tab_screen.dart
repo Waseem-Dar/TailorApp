@@ -3,10 +3,10 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/add_client_screen.dart';
-import 'package:tailor_book/view/gallery_screen.dart';
-import 'package:tailor_book/view/order_screen.dart';
-import 'package:tailor_book/view/profile_screen.dart';
-import 'package:tailor_book/view/user_screen.dart';
+import 'package:tailor_book/view/tabs/gallery_screen.dart';
+import 'package:tailor_book/view/tabs/order_screen.dart';
+import 'package:tailor_book/view/tabs/profile_screen.dart';
+import 'package:tailor_book/view/tabs/users_screen.dart';
 
 class TabScreen extends StatefulWidget {
   const TabScreen({super.key});
@@ -20,7 +20,7 @@ class _TabScreenState extends State<TabScreen> {
 
   final List _tabs = [
     const OrderScreen(),
-    const UserScreen(),
+    const UsersScreen(),
     const GalleryScreen(),
     const ProfileScreen()
   ];
