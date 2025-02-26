@@ -23,7 +23,7 @@ class _UserDetailsScreenOrderCardState extends State<UserDetailsScreenOrderCard>
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 160,
       padding: const EdgeInsets.fromLTRB(16,16,11,16),
       decoration: BoxDecoration(
           color: AppColors.white,
@@ -51,15 +51,15 @@ class _UserDetailsScreenOrderCardState extends State<UserDetailsScreenOrderCard>
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(widget.name,style: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:13, color:Colors.black),maxLines: 1,),
-                    Text(widget.details,style: GoogleFonts.poppins(fontWeight:FontWeight.w400,fontSize:11, color:Colors.black),maxLines: 1,),
+                    Text(widget.name,style: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:14, color:Colors.black),maxLines: 1,),
+                    Text(widget.details,style: GoogleFonts.poppins(fontWeight:FontWeight.w400,fontSize:12, color:Colors.black),maxLines: 1,),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Flexible(
                           child: Text(widget.dDate,style: GoogleFonts.poppins(
-                              fontWeight:FontWeight.w400,fontSize:11, color:AppColors.black6),maxLines: 1,overflow: TextOverflow.ellipsis,),
+                              fontWeight:FontWeight.w400,fontSize:12, color:AppColors.black6),maxLines: 1,overflow: TextOverflow.ellipsis,),
                         ),
                         Text("Rs. ${widget.price}",style: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:11, color:AppColors.primaryColor2)),
                       ],

@@ -155,7 +155,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: UserDetailsScreenOrderCard(name: "Shalwar Kameez #45",image: AppIcons.clothNetworkImage,dDate: "location 123 civil construction",date: "22 march 2025",details:"position inset overflow padding margin" , price: 800,),
+                            child: UserDetailsScreenOrderCard(name: "Shalwar Kameez #45",image: AppIcons.clothNetworkImage,dDate: "22 april 2025",date: "22 march 2025",details:"position inset overflow padding margin" , price: 800,),
                           );
                         },
                       )),
