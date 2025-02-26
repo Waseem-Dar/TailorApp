@@ -34,6 +34,14 @@ class _UsersScreenState extends State<UsersScreen> {
     });
   }
 
+  void deleteSelectedItems() {
+    setState(() {
+      list.removeWhere((index) => selectedItems.contains(index));
+      selectedItems.clear();
+      isSelectionMode = false;
+    });
+  }
+
   bool isSearch = false;
   @override
   Widget build(BuildContext context) {
@@ -48,6 +56,13 @@ class _UsersScreenState extends State<UsersScreen> {
           ),
           automaticallyImplyLeading: false,
           actions: [
+           if(isSelectionMode)IconButton(
+              onPressed: deleteSelectedItems,
+              icon: ImageIcon(
+                AssetImage(AppIcons.deleteIcon),
+                color: AppColors.white,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.only(right: 8),
               child: IconButton(
@@ -102,11 +117,7 @@ class _UsersScreenState extends State<UsersScreen> {
                 color: AppColors.red.withOpacity(0.73),
                 padding: EdgeInsets.only(right: 20),
                 alignment: Alignment.centerRight,
-                child: Icon(
-                  Icons.delete,
-                  color: AppColors.white,
-                  size: 35,
-                ),
+                child: ImageIcon(AssetImage(AppIcons.deleteIcon),size: 35,color: AppColors.white,)
               ),
               direction: !isSelectionMode
                   ? DismissDirection.endToStart
