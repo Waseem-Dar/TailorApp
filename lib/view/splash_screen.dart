@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/auth_view/login_screen.dart';
+import 'package:tailor_book/view/auth_view/choice_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen(),));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => ChoiceScreen(),));
     },);
     super.initState();
   }

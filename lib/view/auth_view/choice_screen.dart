@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/utils/app_color.dart';
+import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/auth_view/login_screen.dart';
 
 class ChoiceScreen extends StatelessWidget {
@@ -23,21 +23,18 @@ class ChoiceScreen extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter)),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             // spacing: 50,
             children: [
-              Text(
-                "LOGO",
-                style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.white,
-                    fontSize: 40),
-              ),
               SizedBox(
-                height: height * 0.15,
+                height: height * 0.09,
+              ),
+              Image.asset(AppIcons.logoIcon,width: 150,),
+              SizedBox(
+                height: height * 0.09,
               ),
               Text(
-                "Welcome to [App Name]",
+                "Welcome to Stitch Craft",
                 style: TextStyle(
                     fontWeight: FontWeight.w600,
                     color: AppColors.white,

@@ -16,9 +16,6 @@ class _DatePickerFieldState extends State<DatePickerField> {
   final TextEditingController _dateController = TextEditingController();
 
 
-
-
-
   // Function to show date picker
   Future<void> _selectDate(BuildContext context) async {
     DateTime? pickedDate = await showDatePicker(

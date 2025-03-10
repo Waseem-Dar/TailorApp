@@ -3,7 +3,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/add_client_screen.dart';
-import 'package:tailor_book/view/tabs/gallery_screen.dart';
+import 'package:tailor_book/view/tabs/gallery_screens/gallery_screen.dart';
 import 'package:tailor_book/view/tabs/order_screen.dart';
 import 'package:tailor_book/view/tabs/profile_screen.dart';
 import 'package:tailor_book/view/tabs/users_screen.dart';

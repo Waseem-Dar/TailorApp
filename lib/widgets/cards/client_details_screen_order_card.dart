@@ -43,9 +43,9 @@ class _UserDetailsScreenOrderCardState extends State<UserDetailsScreenOrderCard>
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(5),
-                child:Image.network(widget.image,fit: BoxFit.cover,width: 65,height: 65,),
+                child:Image.network(widget.image,fit: BoxFit.cover,width: 75,height: 75,),
               ),
-              const SizedBox(width: 25,),
+              const SizedBox(width: 20,),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -53,6 +53,7 @@ class _UserDetailsScreenOrderCardState extends State<UserDetailsScreenOrderCard>
                   children: [
                     Text(widget.name,style: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:14, color:Colors.black),maxLines: 1,),
                     Text(widget.details,style: GoogleFonts.poppins(fontWeight:FontWeight.w400,fontSize:12, color:Colors.black),maxLines: 1,),
+                    const SizedBox(height: 5,),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +62,7 @@ class _UserDetailsScreenOrderCardState extends State<UserDetailsScreenOrderCard>
                           child: Text(widget.dDate,style: GoogleFonts.poppins(
                               fontWeight:FontWeight.w400,fontSize:12, color:AppColors.black6),maxLines: 1,overflow: TextOverflow.ellipsis,),
                         ),
-                        Text("Rs. ${widget.price}",style: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:11, color:AppColors.primaryColor2)),
+                        Text("Rs. ${widget.price}",style: GoogleFonts.poppins(fontWeight:FontWeight.w500,fontSize:13, color:AppColors.primaryColor2)),
                       ],
                     ),
 
