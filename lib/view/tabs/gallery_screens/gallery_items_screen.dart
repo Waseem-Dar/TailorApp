@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_book/view/tabs/gallery_screens/gallery_item_details_screen.dart';
 
 import '../../../data/cloth_images.dart';
 import '../../../model/gallery_model.dart';
@@ -53,7 +54,11 @@ class _GalleryItemsScreenState extends State<GalleryItemsScreen> {
               itemCount: ClothImages.galleryItems.length,
               itemBuilder: (BuildContext context, int index) {
                 final item = ClothImages.galleryItems[index];
-                return GalleryItemCard(item: GalleryModel(image:item["image"]! , name: item["name"]!),index: index,);
+                return InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => GalleryItemDetailsScreen(item: GalleryModel(image:item["image"]! , name: item["name"]!),),));
+                    },
+                    child: GalleryItemCard(item: GalleryModel(image:item["image"]! , name: item["name"]!),index: index,));
               },
             ),
           ),

@@ -8,6 +8,7 @@ import 'package:tailor_book/model/gallery_model.dart';
 import '../../../utils/app_color.dart';
 import '../../../utils/app_icons.dart';
 import '../../../widgets/cards/gallery_item_card.dart';
+import 'gallery_items_screen.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -109,7 +110,11 @@ double animateFrom=40;
                 itemCount: ClothImages.galleryItems.length,
                 itemBuilder: (BuildContext context, int index) {
                   final item = ClothImages.galleryItems[index];
-                  return GalleryItemCard(item: GalleryModel(image:item["image"]! , name: item["name"]!),index: index,);
+                  return InkWell(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => GalleryItemsScreen(name:item["image"]!,),));
+                      },
+                      child: GalleryItemCard(item: GalleryModel(image:item["image"]! , name: item["name"]!),index: index,));
                 },
               ),
             ),
