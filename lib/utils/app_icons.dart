@@ -17,6 +17,7 @@ class AppIcons{
   static String femaleIcon = "assets/images/female.png";
   static String deleteIcon = "assets/images/delete-icon.png";
   static String favoriteIcon = "assets/images/fav-outline.png";
+  static String favoriteFillIcon = "assets/images/fav-icon.png";
   static String addImageIcon = "assets/images/addimage.png";
   static String logoIcon = "assets/images/logo.png";
   static String chatIcon = "assets/images/bubble-chat.png";
