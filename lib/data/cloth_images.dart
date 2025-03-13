@@ -48,4 +48,70 @@ class ClothImages {
   ];
 
 
+  static List<Map<String ,String>> fabricImages = [
+      {"color" : "Grey", "image" : "https://i.pinimg.com/236x/f4/51/2d/f4512d2df4250865a1a89b4501b3040a.jpg",},
+      {"color" : "Black", "image" : "https://i.pinimg.com/236x/31/bf/df/31bfdfe6f2a90ded12f07f9ffdc9b804.jpg",},
+      {"color" : "Yellow", "image" : "https://i.pinimg.com/236x/e5/fe/8b/e5fe8bbdfeb592ebe51fef57468ebf9c.jpg",},
+      {"color" : "White", "image" : "https://i.pinimg.com/736x/77/2e/d0/772ed00fa35253408f10a870f88700e8.jpg",},
+      {"color" : "Green", "image" : "https://i.pinimg.com/236x/d0/f9/4a/d0f94a2a6ceb38da835777abddea1a1e.jpg",},
+      {"color" : "Brown", "image" : "https://i.pinimg.com/236x/82/9d/8a/829d8afcc3bd325546c681c5fc80cea8.jpg",},
+      {"color" : "Black", "image" : "https://i.pinimg.com/236x/31/bf/df/31bfdfe6f2a90ded12f07f9ffdc9b804.jpg",},
+      {"color" : "Blue", "image" : "https://i.pinimg.com/236x/95/3f/65/953f65e5dfdc84885b51189c0adab001.jpg",},
+      {"color" : "Yellow", "image" : "https://i.pinimg.com/236x/e5/fe/8b/e5fe8bbdfeb592ebe51fef57468ebf9c.jpg",},
+  ];
+
+
+  static List<Map<String ,String>> popularImages = [
+      {"color" : "Grey", "image" : "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png",},
+      {"color" : "Yellow", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-little-remix-jr-fur-coat-cardyfurry-animal-hidesclothingwarmcoatwomensfur-coatlittleremixcardy-14215263178582juxn.png",},
+      {"color" : "White", "image" : "httpjpg",},
+      {"color" : "Green", "image" : "httppg",},
+      {"color" : "Black", "image" : "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326949yy7yw.png",},
+      {"color" : "Brown", "image" : "httpspg",},
+      {"color" : "Black", "image" : "httpsjpg",},
+      {"color" : "Blue", "image" : "httpsjpg",},
+      {"color" : "Yellow", "image" : "htjpg",},
+  ];
+
+
+
+static List<String> clientShirtImages = [
+     "https://i.pinimg.com/236x/fd/0d/18/fd0d182296ffd350368013654f34f9a2.jpg",
+      "https://i.pinimg.com/236x/5e/33/a7/5e33a7a494671acc912c1cbaf792c2a1.jpg",
+      "https://i.pinimg.com/236x/f9/ab/ed/f9abed3e2cbeac3f3ee1776bf0d4b8ae.jpg",
+      "https://i.pinimg.com/474x/2a/d2/18/2ad218b05514f2c08e18b986790ad650.jpg",
+      "https://i.pinimg.com/474x/bb/de/1d/bbde1d191cb13eec55f6717a3fb06846.jpg",
+      "https://i.pinimg.com/236x/19/58/90/1958903810f0e9c76b638a6c032a226a.jpg",
+      "https://i.pinimg.com/236x/53/22/da/5322dac5530afd1682f215619b5d423d.jpg",
+      "https://i.pinimg.com/236x/98/a3/e6/98a3e69b6877666ffb292d08beb1dea9.jpg",
+      "https://i.pinimg.com/236x/90/f0/01/90f0011f8744aae361a2b470b276fa56.jpg",
+      "https://i.pinimg.com/236x/b1/f8/d8/b1f8d80e21f3cf2cefdfbc88a7e8c5ed.jpg",
+      "https://i.pinimg.com/236x/8a/d9/ba/8ad9ba8ffec4492dbe2cd8de3a3555b6.jpg",
+      "https://i.pinimg.com/236x/27/b5/a1/27b5a1602087a7113d58118e357bdc54.jpg",
+      "https://i.pinimg.com/236x/1f/9e/9f/1f9e9fe4db1242654c94e2b114dab620.jpg",
+      "https://i.pinimg.com/236x/5b/da/af/5bdaafdb6dbdc570d448db385f1d6b91.jpg",
+  ];
+
+static List<String> dealImages = [
+     "https://i.pinimg.com/736x/77/2e/d0/772ed00fa35253408f10a870f88700e8.jpg",
+      "https://i.pinimg.com/236x/5e/33/a7/5e33a7a494671acc912c1cbaf792c2a1.jpg",
+      "https://i.pinimg.com/236x/f9/ab/ed/f9abed3e2cbeac3f3ee1776bf0d4b8ae.jpg",
+      "https://i.pinimg.com/474x/2a/d2/18/2ad218b05514f2c08e18b986790ad650.jpg",
+      "https://i.pinimg.com/474x/bb/de/1d/bbde1d191cb13eec55f6717a3fb06846.jpg",
+      "https://i.pinimg.com/236x/19/58/90/1958903810f0e9c76b638a6c032a226a.jpg",
+      "https://i.pinimg.com/236x/53/22/da/5322dac5530afd1682f215619b5d423d.jpg",
+      "https://i.pinimg.com/236x/98/a3/e6/98a3e69b6877666ffb292d08beb1dea9.jpg",
+      "https://i.pinimg.com/236x/90/f0/01/90f0011f8744aae361a2b470b276fa56.jpg",
+      "https://i.pinimg.com/236x/b1/f8/d8/b1f8d80e21f3cf2cefdfbc88a7e8c5ed.jpg",
+      "https://i.pinimg.com/236x/8a/d9/ba/8ad9ba8ffec4492dbe2cd8de3a3555b6.jpg",
+      "https://i.pinimg.com/236x/27/b5/a1/27b5a1602087a7113d58118e357bdc54.jpg",
+      "https://i.pinimg.com/236x/1f/9e/9f/1f9e9fe4db1242654c94e2b114dab620.jpg",
+      "https://i.pinimg.com/236x/5b/da/af/5bdaafdb6dbdc570d448db385f1d6b91.jpg",
+  ];
+
+
+
+
+
+
 }
