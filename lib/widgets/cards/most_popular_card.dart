@@ -35,7 +35,7 @@ class _MostPopularCardState extends State<MostPopularCard> {
               height: 48,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
-                  image: DecorationImage(image: AssetImage(widget.image),fit: BoxFit.cover)
+                  image: DecorationImage(image: NetworkImage(widget.image),fit: BoxFit.cover)
               ) ,
             ),
             const SizedBox(width: 10,),
@@ -61,7 +61,6 @@ class _MostPopularCardState extends State<MostPopularCard> {
                     color: Colors.amber,
                   ),
                   onRatingUpdate: (rating) {
-                    // AppList.rateList[widget.index]["rating"] = rating;
                   },
                 ),
                 Row(

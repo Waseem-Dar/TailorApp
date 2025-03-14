@@ -76,16 +76,10 @@ class ClothImages {
 
 static List<String> clientShirtImages = [
      "https://i.pinimg.com/236x/fd/0d/18/fd0d182296ffd350368013654f34f9a2.jpg",
-      "https://i.pinimg.com/236x/5e/33/a7/5e33a7a494671acc912c1cbaf792c2a1.jpg",
       "https://i.pinimg.com/236x/f9/ab/ed/f9abed3e2cbeac3f3ee1776bf0d4b8ae.jpg",
       "https://i.pinimg.com/474x/2a/d2/18/2ad218b05514f2c08e18b986790ad650.jpg",
-      "https://i.pinimg.com/474x/bb/de/1d/bbde1d191cb13eec55f6717a3fb06846.jpg",
       "https://i.pinimg.com/236x/19/58/90/1958903810f0e9c76b638a6c032a226a.jpg",
-      "https://i.pinimg.com/236x/53/22/da/5322dac5530afd1682f215619b5d423d.jpg",
-      "https://i.pinimg.com/236x/98/a3/e6/98a3e69b6877666ffb292d08beb1dea9.jpg",
-      "https://i.pinimg.com/236x/90/f0/01/90f0011f8744aae361a2b470b276fa56.jpg",
       "https://i.pinimg.com/236x/b1/f8/d8/b1f8d80e21f3cf2cefdfbc88a7e8c5ed.jpg",
-      "https://i.pinimg.com/236x/8a/d9/ba/8ad9ba8ffec4492dbe2cd8de3a3555b6.jpg",
       "https://i.pinimg.com/236x/27/b5/a1/27b5a1602087a7113d58118e357bdc54.jpg",
       "https://i.pinimg.com/236x/1f/9e/9f/1f9e9fe4db1242654c94e2b114dab620.jpg",
       "https://i.pinimg.com/236x/5b/da/af/5bdaafdb6dbdc570d448db385f1d6b91.jpg",
@@ -112,23 +106,23 @@ static List<String> dealImages = [
  static String banner = "https://i.pinimg.com/736x/c9/4b/80/c94b80778cc44b28a45fe4aea8415e52.jpg";
 
 static List<String> bannerImages = [
-     "https://i.pinimg.com/736x/4a/e5/d3/4ae5d3074757a801a194a46b84f095cb.jpg",
      "https://i.pinimg.com/736x/c6/9c/e0/c69ce09062deeebb82adcf923f562fed.jpg",
      "https://i.pinimg.com/736x/7b/e2/a0/7be2a086702367713f244b126593eea4.jpg",
      "https://i.pinimg.com/736x/52/1e/fb/521efb5f0eaeb33d81e4156142985e91.jpg",
      "https://i.pinimg.com/736x/f5/84/e1/f584e1789fa5ab5cc30dddf50fec26aa.jpg",
      "https://i.pinimg.com/736x/b3/40/06/b340069f756f531099bacba856348e3e.jpg",
      "https://i.pinimg.com/736x/f7/6f/1e/f76f1e32748a8889cb436521a5b3cf28.jpg",
+     "https://i.pinimg.com/736x/4a/e5/d3/4ae5d3074757a801a194a46b84f095cb.jpg",
 
   ];
 
 static List<String> mostPopularImages = [
+     "https://i.pinimg.com/474x/38/41/db/3841db95d2f6ca9beaed88cdda2c538a.jpg",
+     "https://i.pinimg.com/474x/4a/36/db/4a36db337f63cd3db1900a3b9798d674.jpg",
      "https://i.pinimg.com/474x/1b/be/f0/1bbef0e41dc6b10fcbee16d9e9ad5efd.jpg",
      "https://i.pinimg.com/474x/be/f1/64/bef164fdb43b4a4313dd6018643c0b18.jpg",
      "https://i.pinimg.com/474x/17/17/1d/17171d9a2e6f8590e3fbf5b04528f41f.jpg",
      "https://i.pinimg.com/474x/5e/1d/b3/5e1db37c7d24d237d53678f1d5e87adc.jpg",
-     "https://i.pinimg.com/474x/38/41/db/3841db95d2f6ca9beaed88cdda2c538a.jpg",
-     "https://i.pinimg.com/474x/4a/36/db/4a36db337f63cd3db1900a3b9798d674.jpg",
   ];
 
 

@@ -45,6 +45,6 @@ class FabricCard extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }
