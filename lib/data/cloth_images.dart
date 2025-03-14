@@ -61,14 +61,14 @@ class ClothImages {
   ];
 
 
-  static List<Map<String ,String>> popularImages = [
-      {"color" : "Grey", "image" : "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png",},
-      {"color" : "Yellow", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-little-remix-jr-fur-coat-cardyfurry-animal-hidesclothingwarmcoatwomensfur-coatlittleremixcardy-14215263178582juxn.png",},
-      {"color" : "White", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-white-fur-clothingfurry-animal-hidesclothingwarmcoatwhite-1421526315978vr2yx.png",},
-      {"color" : "Green", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-sexy-women-yves-salomon-fur-coat-brownfurry-animal-hidesclothingwarmcoatlongsexywomensalomonbrown-1421526315564zqey2.png",},
-      {"color" : "Black", "image" : "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326949yy7yw.png",},
-      {"color" : "Brown", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-chloe-sudan-front-fur-coatfurry-animal-hidesclothingwarmcoatsudanfrontchloe-1421526316949mhgys.png",},
-      {"color" : "Black", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-faux-fur-coat-short-pinkfurry-animal-hidesclothingwarmcoatfauxshortpink-1421526315940vzxfk.png",},
+  static List<String> popularImages = [
+      "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png",
+       "https://purepng.com/public/uploads/thumbnail/purepng.com-little-remix-jr-fur-coat-cardyfurry-animal-hidesclothingwarmcoatwomensfur-coatlittleremixcardy-14215263178582juxn.png",
+       "https://purepng.com/public/uploads/thumbnail/purepng.com-white-fur-clothingfurry-animal-hidesclothingwarmcoatwhite-1421526315978vr2yx.png",
+       "https://purepng.com/public/uploads/thumbnail/purepng.com-sexy-women-yves-salomon-fur-coat-brownfurry-animal-hidesclothingwarmcoatlongsexywomensalomonbrown-1421526315564zqey2.png",
+       "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326949yy7yw.png",
+       "https://purepng.com/public/uploads/thumbnail/purepng.com-chloe-sudan-front-fur-coatfurry-animal-hidesclothingwarmcoatsudanfrontchloe-1421526316949mhgys.png",
+       "https://purepng.com/public/uploads/thumbnail/purepng.com-faux-fur-coat-short-pinkfurry-animal-hidesclothingwarmcoatfauxshortpink-1421526315940vzxfk.png",
 
   ];
 

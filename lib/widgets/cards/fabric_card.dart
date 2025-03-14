@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_book/model/gallery_model.dart';
 
 import '../../utils/app_color.dart';
 
 class FabricCard extends StatelessWidget {
-  final String name;
-  final String image;
+  final GalleryModel item;
   final VoidCallback onTap;
-  const FabricCard({super.key, required this.name, required this.image, required this.onTap});
+  const FabricCard({super.key, required this.item, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +37,9 @@ class FabricCard extends StatelessWidget {
                 Container(
                   height:50,
                   padding: const EdgeInsets.symmetric(horizontal: 8,),
-                  child: Image.asset(image),
+                  child: Image.network(item.image),
                 ),
-                Text(name,style: GoogleFonts.poppins(fontSize:13,fontWeight:FontWeight.w500,color:Colors.black.withOpacity(.25),),)
+                Text(item.name,style: GoogleFonts.poppins(fontSize:13,fontWeight:FontWeight.w500,color:Colors.black.withOpacity(.25),),)
               ],
             ),
           ),

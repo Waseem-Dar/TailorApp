@@ -191,7 +191,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     final item = ClothImages.fabricImages[index];
-                    return FabricCard(name: "///*****name", image: "////**image", onTap: (){});
+                    return FabricCard(item:  GalleryModel(image:item["image"]! , name: item["color"]!), onTap: (){});
                   },),
               ),
             ),
@@ -203,7 +203,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Popular Burgers",style: GoogleFonts.poppins(
+                  Text("Popular Design",style: GoogleFonts.poppins(
                     fontSize:16,fontWeight:FontWeight.w600,color:Colors.black,),),
                   InkWell(
                       onTap: (){},
@@ -216,11 +216,12 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
               height: 193,
               child: ListView.builder(
                 padding: const EdgeInsets.only(left:  30,right: 10),
-                itemCount:10,
+                itemCount:ClothImages.popularImages.length,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return PopularDesignCard(image: "///*****image",);
+                  final image = ClothImages.popularImages[index];
+                  return PopularDesignCard(image: image,);
                 },),
             ),
             Padding(

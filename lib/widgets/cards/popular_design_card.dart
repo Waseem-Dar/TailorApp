@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_book/utils/app_icons.dart';
 
 import '../../utils/app_color.dart';
 
@@ -33,9 +34,9 @@ class _PopularDesignCardState extends State<PopularDesignCard> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-                width:95,
+                width:110,
                 height:95,
-                child: Image.asset(widget.image)),
+                child: Image.network(widget.image)),
             SizedBox(
                 width: double.infinity,
                 child: Text("Fashion",style: GoogleFonts.poppins(fontSize:12,fontWeight:FontWeight.w500,color:Colors.black),textAlign: TextAlign.left)),
@@ -72,7 +73,7 @@ class _PopularDesignCardState extends State<PopularDesignCard> {
                           padding: EdgeInsets.zero,
                           onPressed: (){
                             // Constant.showSnackBar(context, "Added to Cart", "assets/images/cart-fill-icon.png");
-                          }, icon: ImageIcon(const AssetImage("assets/images/circle-add-icon.png"),size: 19,color: AppColors.primaryColor2,))),
+                          }, icon: ImageIcon( AssetImage(AppIcons.circleAddIcon),size: 19,color: AppColors.primaryColor2,))),
                 ],
               ),
             )
