@@ -64,13 +64,12 @@ class ClothImages {
   static List<Map<String ,String>> popularImages = [
       {"color" : "Grey", "image" : "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326975ia8xr.png",},
       {"color" : "Yellow", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-little-remix-jr-fur-coat-cardyfurry-animal-hidesclothingwarmcoatwomensfur-coatlittleremixcardy-14215263178582juxn.png",},
-      {"color" : "White", "image" : "httpjpg",},
-      {"color" : "Green", "image" : "httppg",},
+      {"color" : "White", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-white-fur-clothingfurry-animal-hidesclothingwarmcoatwhite-1421526315978vr2yx.png",},
+      {"color" : "Green", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-sexy-women-yves-salomon-fur-coat-brownfurry-animal-hidesclothingwarmcoatlongsexywomensalomonbrown-1421526315564zqey2.png",},
       {"color" : "Black", "image" : "https://purepng.com/public/uploads/large/purepng.com-women-dressclothingwomen-dressfashion-women-dress-cloth-apparel-631522326949yy7yw.png",},
-      {"color" : "Brown", "image" : "httpspg",},
-      {"color" : "Black", "image" : "httpsjpg",},
-      {"color" : "Blue", "image" : "httpsjpg",},
-      {"color" : "Yellow", "image" : "htjpg",},
+      {"color" : "Brown", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-chloe-sudan-front-fur-coatfurry-animal-hidesclothingwarmcoatsudanfrontchloe-1421526316949mhgys.png",},
+      {"color" : "Black", "image" : "https://purepng.com/public/uploads/thumbnail/purepng.com-faux-fur-coat-short-pinkfurry-animal-hidesclothingwarmcoatfauxshortpink-1421526315940vzxfk.png",},
+
   ];
 
 
@@ -110,7 +109,32 @@ static List<String> dealImages = [
   ];
 
 
+ static String banner = "https://i.pinimg.com/736x/c9/4b/80/c94b80778cc44b28a45fe4aea8415e52.jpg";
 
+static List<String> bannerImages = [
+     "https://i.pinimg.com/736x/4a/e5/d3/4ae5d3074757a801a194a46b84f095cb.jpg",
+     "https://i.pinimg.com/736x/c6/9c/e0/c69ce09062deeebb82adcf923f562fed.jpg",
+     "https://i.pinimg.com/736x/7b/e2/a0/7be2a086702367713f244b126593eea4.jpg",
+     "https://i.pinimg.com/736x/52/1e/fb/521efb5f0eaeb33d81e4156142985e91.jpg",
+     "https://i.pinimg.com/736x/f5/84/e1/f584e1789fa5ab5cc30dddf50fec26aa.jpg",
+     "https://i.pinimg.com/736x/b3/40/06/b340069f756f531099bacba856348e3e.jpg",
+     "https://i.pinimg.com/736x/f7/6f/1e/f76f1e32748a8889cb436521a5b3cf28.jpg",
+
+  ];
+
+static List<String> mostPopularImages = [
+     "https://i.pinimg.com/474x/1b/be/f0/1bbef0e41dc6b10fcbee16d9e9ad5efd.jpg",
+     "https://i.pinimg.com/474x/be/f1/64/bef164fdb43b4a4313dd6018643c0b18.jpg",
+     "https://i.pinimg.com/474x/17/17/1d/17171d9a2e6f8590e3fbf5b04528f41f.jpg",
+     "https://i.pinimg.com/474x/5e/1d/b3/5e1db37c7d24d237d53678f1d5e87adc.jpg",
+     "https://i.pinimg.com/474x/38/41/db/3841db95d2f6ca9beaed88cdda2c538a.jpg",
+     "https://i.pinimg.com/474x/4a/36/db/4a36db337f63cd3db1900a3b9798d674.jpg",
+  ];
+
+
+
+
+  static List<String> choiceList = ["All","Men","Women","Kids","More"];
 
 
 
