@@ -206,7 +206,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
               width: double.infinity,
               padding: const EdgeInsets.fromLTRB(30, 25, 0, 0),
               child: Text(
-                "Fabric foe Men's",
+                "Fabric for Men's",
                 style: GoogleFonts.poppins(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,

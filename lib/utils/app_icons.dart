@@ -22,6 +22,8 @@ class AppIcons{
   static String logoIcon = "assets/images/logo.png";
   static String chatIcon = "assets/images/bubble-chat.png";
   static String telephoneIcon = "assets/images/telephone.png";
+  static String homeIcon = "assets/images/home.png";
+  static String homeOutlineIcon = "assets/images/home-outline.png";
   static String circleAddIcon = "assets/images/circle-add-icon.png";
   static String whatsappIcon = "assets/images/whatsapp.png";
   static String clothNetworkImage = "https://www.shutterstock.com/image-photo/stack-colorful-clothes-pile-clothing-600nw-2203081765.jpg";
