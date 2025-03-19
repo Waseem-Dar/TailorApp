@@ -31,13 +31,13 @@ class _ClientTabScreenState extends State<ClientTabScreen> {
   final iconList = [
     AppIcons.homeIcon,
     AppIcons.usersIcon,
-    AppIcons.galleryIcon,
+    AppIcons.orderIcon,
     AppIcons.profileIcon,
   ];
   final iconList1 = [
     AppIcons.homeOutlineIcon,
     AppIcons.usersIcon1,
-    AppIcons.galleryIcon1,
+    AppIcons.orderIcon1,
     AppIcons.profileIcon,
   ];
 
