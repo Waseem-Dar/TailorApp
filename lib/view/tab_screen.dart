@@ -5,7 +5,7 @@ import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/add_client_screen.dart';
 import 'package:tailor_book/view/tabs/gallery_screens/gallery_screen.dart';
 import 'package:tailor_book/view/tabs/order_screen.dart';
-import 'package:tailor_book/view/tabs/profile_screen.dart';
+import 'package:tailor_book/view/tabs/Reports_screen.dart';
 import 'package:tailor_book/view/tabs/users_screen.dart';
 
 class TabScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _TabScreenState extends State<TabScreen> {
     const OrderScreen(),
     const UsersScreen(),
     const GalleryScreen(),
-    const ProfileScreen()
+    const ReportsScreen()
   ];
   final iconList = [
     AppIcons.orderIcon,
