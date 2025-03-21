@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:tailor_book/widgets/app_widgets.dart';
+import 'package:tailor_book/widgets/cards/gender_orders_activity_card.dart';
 
 import '../../main.dart';
 import '../../utils/app_color.dart';
@@ -57,8 +59,8 @@ class _ReportsScreenState extends State<ReportsScreen> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
+        padding: const EdgeInsets.fromLTRB(24,24,24,0),
+        child: ListView(
           children: [
             //  Selecting Date
             Row(
@@ -101,51 +103,27 @@ class _ReportsScreenState extends State<ReportsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Performance",style: GoogleFonts.poppins(fontWeight: FontWeight.w400),),
+                  Text("Orders performance",style: GoogleFonts.poppins(fontWeight: FontWeight.w400),),
                   SizedBox(height: 14,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: mq.width/2-45,
-                        height: 85,
-                        color: AppColors.red.withOpacity(0.2),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ImageIcon(AssetImage(AppIcons.whatsappIcon),color: AppColors.white,),
-                            Text("Daily",style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.w500,color: AppColors.red),),
-                            Text("18",style: GoogleFonts.poppins(fontSize: 13,fontWeight: FontWeight.w500,color: AppColors.red),),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: mq.width/2-45,
-                        height: 80,
-                        color: Colors.yellow,
-                      )
+                      AppWidgets.orderPerformanceWidget(AppIcons.dailyReportIcon, "Daily", 5, AppColors.green),
+                      AppWidgets.orderPerformanceWidget(AppIcons.weeklyReportIcon, "Weekly", 23, AppColors.blue),
                     ],
                   ),
                   SizedBox(height: 14,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        width: mq.width/2-45,
-                        height: 80,
-                        color: AppColors.red,
-                      ),
-                      Container(
-                        width: mq.width/2-45,
-                        height: 80,
-                        color: Colors.yellow,
-                      )
+                      AppWidgets.orderPerformanceWidget(AppIcons.monthlyReportIcon, "Monthly", 45, AppColors.yellow),
+                      AppWidgets.orderPerformanceWidget(AppIcons.yearlyReportIcon, "Yearly", 856, AppColors.red),
                     ],
                   )
                 ],
               ),
-            )
-
+            ),
+            GenderOrdersActivityCard()
 
           ],
         ),

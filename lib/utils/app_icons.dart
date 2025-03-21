@@ -20,6 +20,10 @@ class AppIcons{
   static String favoriteFillIcon = "assets/images/fav-icon.png";
   static String addImageIcon = "assets/images/addimage.png";
   static String logoIcon = "assets/images/logo.png";
+  static String dailyReportIcon = "assets/images/daily-icon.png";
+  static String weeklyReportIcon = "assets/images/weekly-icon.png";
+  static String monthlyReportIcon = "assets/images/monthly-icon.png";
+  static String yearlyReportIcon = "assets/images/yearly-icon.png";
   static String chatIcon = "assets/images/bubble-chat.png";
   static String telephoneIcon = "assets/images/telephone.png";
   static String homeIcon = "assets/images/home.png";

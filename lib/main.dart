@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor2),
         useMaterial3: true,
       ),
-      home: const ReportsScreen(),
+      home: const SplashScreen(),
     );
   }
 }

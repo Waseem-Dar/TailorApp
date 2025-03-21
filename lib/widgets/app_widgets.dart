@@ -141,5 +141,65 @@ class AppWidgets {
     );
   }
 
+  static Widget orderPerformanceWidget(String icon,String text,int orders,Color color ){
+    return Container(
+      width: mq.width/2-45,
+      height: 85,
+      color: color.withOpacity(0.15),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ImageIcon(AssetImage(icon),color: color,),
+          Text(text,style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.w500,color: color),),
+          Text(orders.toString(),style: GoogleFonts.poppins(fontSize: 13,fontWeight: FontWeight.w500,color: color),),
+        ],
+      ),
+    );
+  }
+
+
+  static Widget showPercentage(String percent) {
+    return Container(
+      width: 56,
+      height: 56,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(30),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF000000).withOpacity(0.1),
+            offset: const Offset(4, 8),
+            blurRadius: 25,
+            spreadRadius: 0,
+          ),
+        ],
+      ),
+      child: Center(
+        child: RichText(
+          textAlign: TextAlign.center,
+          text:  TextSpan(
+            children: [
+              TextSpan(
+                text: percent,
+                style: GoogleFonts.nunito(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                ),
+              ),
+              TextSpan(
+                text: "%",
+                style: GoogleFonts.nunito(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: AppColors.black2,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
 }
