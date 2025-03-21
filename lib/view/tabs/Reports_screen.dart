@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -58,12 +59,13 @@ class _ReportsScreenState extends State<ReportsScreen> {
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(24,24,24,0),
-        child: ListView(
-          children: [
-            //  Selecting Date
-            Row(
+      body: ListView(
+        children: [
+          SizedBox(height: 24,),
+          //  Selecting Date
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Reporting Month", style: GoogleFonts.poppins(
@@ -87,46 +89,49 @@ class _ReportsScreenState extends State<ReportsScreen> {
                 ),
               ],
             ),
-            //Today Reports
-            SizedBox(height: 15,),
-            Container(
-              width: double.infinity,
-              // height: 250,
-              padding: EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [BoxShadow(
-                      color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
-                  )]
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Orders performance",style: GoogleFonts.poppins(fontWeight: FontWeight.w400),),
-                  SizedBox(height: 14,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      AppWidgets.orderPerformanceWidget(AppIcons.dailyReportIcon, "Daily", 5, AppColors.green),
-                      AppWidgets.orderPerformanceWidget(AppIcons.weeklyReportIcon, "Weekly", 23, AppColors.blue),
-                    ],
-                  ),
-                  SizedBox(height: 14,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      AppWidgets.orderPerformanceWidget(AppIcons.monthlyReportIcon, "Monthly", 45, AppColors.yellow),
-                      AppWidgets.orderPerformanceWidget(AppIcons.yearlyReportIcon, "Yearly", 856, AppColors.red),
-                    ],
-                  )
-                ],
-              ),
+          ),
+          //Today Reports
+          SizedBox(height: 15,),
+          Container(
+            width: double.infinity,
+            // height: 250,
+            padding: EdgeInsets.all(14),
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [BoxShadow(
+                    color: AppColors.black.withOpacity(0.1),offset: const Offset(0, 4),blurRadius:11.199999809265137
+                )]
             ),
-            GenderOrdersActivityCard()
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("Orders performance",style: GoogleFonts.poppins(fontSize: 15,fontWeight: FontWeight.w500,color: AppColors.black3),),
+                SizedBox(height: 14,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AppWidgets.orderPerformanceWidget(AppIcons.dailyReportIcon, "Daily", 5, AppColors.green),
+                    AppWidgets.orderPerformanceWidget(AppIcons.weeklyReportIcon, "Weekly", 23, AppColors.blue),
+                  ],
+                ),
+                SizedBox(height: 14,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AppWidgets.orderPerformanceWidget(AppIcons.monthlyReportIcon, "Monthly", 45, AppColors.yellow),
+                    AppWidgets.orderPerformanceWidget(AppIcons.yearlyReportIcon, "Yearly", 856, AppColors.red),
+                  ],
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: 15,),
+          GenderOrdersActivityCard(),
+          SizedBox(height: 50,)
 
-          ],
-        ),
+        ],
       ),
     );
   }
