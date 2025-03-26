@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:tailor_book/view/profile_screen.dart';
 import 'package:tailor_book/widgets/app_widgets.dart';
 import 'package:tailor_book/widgets/cards/gender_orders_activity_card.dart';
 
@@ -57,6 +58,19 @@ class _ReportsScreenState extends State<ReportsScreen> {
               ),
             ),
           ),
+            Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen(),));
+              },
+              icon: Icon(
+                Icons.person_outline,
+                color: AppColors.white,
+              ),
+            ),
+          ),
+
         ],
       ),
       body: ListView(
