@@ -3,9 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/auth_view/login_screen.dart';
-import 'package:tailor_book/view/client_tabs_screen.dart';
+import 'package:tailor_book/view/client_side_view/client_tabs_screen.dart';
 
-import '../client_tabs/client_home_screen.dart';
 
 class ChoiceScreen extends StatelessWidget {
   const ChoiceScreen({super.key});

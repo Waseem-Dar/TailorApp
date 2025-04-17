@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/view/auth_view/otp_email_screen.dart';
 import 'package:tailor_book/view/auth_view/signup_screen.dart';
 import 'package:tailor_book/view/auth_view/otp_screen.dart';
-import 'package:tailor_book/view/tab_screen.dart';
+import 'package:tailor_book/view/tailor_side_view/tab_screen.dart';
 import 'package:tailor_book/widgets/app_widgets.dart';
 import 'package:tailor_book/widgets/auth_screen_widget.dart';
 

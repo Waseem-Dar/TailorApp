@@ -3,10 +3,10 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../utils/app_color.dart';
-import '../utils/app_icons.dart';
-import '../widgets/app_widgets.dart';
-import '../widgets/cards/client_details_screen_order_card.dart';
+import '../../utils/app_color.dart';
+import '../../utils/app_icons.dart';
+import '../../widgets/app_widgets.dart';
+import '../../widgets/cards/client_details_screen_order_card.dart';
 
 class UserDetailsScreen extends StatefulWidget {
   const UserDetailsScreen({super.key});

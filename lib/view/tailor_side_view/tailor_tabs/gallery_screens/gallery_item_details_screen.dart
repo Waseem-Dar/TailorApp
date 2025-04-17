@@ -4,11 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/data/cloth_images.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/widgets/app_widgets.dart';
+import '../../../../main.dart';
+import '../../../../model/gallery_model.dart';
+import '../../../../utils/app_icons.dart';
+import '../../../../widgets/cards/similer_item_card.dart';
 
-import '../../../main.dart';
-import '../../../model/gallery_model.dart';
-import '../../../utils/app_icons.dart';
-import '../../../widgets/cards/similer_item_card.dart';
 
 class GalleryItemDetailsScreen extends StatefulWidget {
   final GalleryModel item;

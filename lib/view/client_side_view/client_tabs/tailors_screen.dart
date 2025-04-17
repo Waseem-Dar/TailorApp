@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
-import 'package:tailor_book/view/user_details_screen.dart';
+import 'package:tailor_book/view/tailor_side_view/user_details_screen.dart';
 
-class UsersScreen extends StatefulWidget {
-  const UsersScreen({super.key});
+class TailorsScreen extends StatefulWidget {
+  const TailorsScreen({super.key});
 
   @override
-  State<UsersScreen> createState() => _UsersScreenState();
+  State<TailorsScreen> createState() => _TailorsScreenState();
 }
 
-class _UsersScreenState extends State<UsersScreen> {
+class _TailorsScreenState extends State<TailorsScreen> {
   List list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13, 14, 15];
 
   Set<int> selectedItems = {}; // Stores selected item indexes
@@ -46,7 +46,7 @@ class _UsersScreenState extends State<UsersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+        backgroundColor: AppColors.background,
         appBar: AppBar(
           backgroundColor: AppColors.primaryColor2,
           // surfaceTintColor: Colors.transparent,
@@ -56,7 +56,7 @@ class _UsersScreenState extends State<UsersScreen> {
           ),
           automaticallyImplyLeading: false,
           actions: [
-           if(isSelectionMode)IconButton(
+            if(isSelectionMode)IconButton(
               onPressed: deleteSelectedItems,
               icon: ImageIcon(
                 AssetImage(AppIcons.deleteIcon),
@@ -114,10 +114,10 @@ class _UsersScreenState extends State<UsersScreen> {
             return Dismissible(
               key: Key(index.toString()),
               background: Container(
-                color: AppColors.red.withOpacity(0.73),
-                padding: EdgeInsets.only(right: 20),
-                alignment: Alignment.centerRight,
-                child: ImageIcon(AssetImage(AppIcons.deleteIcon),size: 35,color: AppColors.white,)
+                  color: AppColors.red.withOpacity(0.73),
+                  padding: EdgeInsets.only(right: 20),
+                  alignment: Alignment.centerRight,
+                  child: ImageIcon(AssetImage(AppIcons.deleteIcon),size: 35,color: AppColors.white,)
               ),
               direction: !isSelectionMode
                   ? DismissDirection.endToStart
@@ -132,12 +132,12 @@ class _UsersScreenState extends State<UsersScreen> {
                   onTap: isSelectionMode
                       ? () => toggleSelection(index)
                       : () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => UserDetailsScreen(),
-                              ));
-                        },
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UserDetailsScreen(),
+                        ));
+                  },
                   tileColor: isSelected
                       ? AppColors.primaryColor2.withOpacity(0.15)
                       : AppColors.background,
@@ -145,7 +145,7 @@ class _UsersScreenState extends State<UsersScreen> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   contentPadding:
-                      EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+                  EdgeInsets.symmetric(vertical: 0, horizontal: 16),
                   leading: Container(
                     height: 57,
                     width: 57,
@@ -156,7 +156,7 @@ class _UsersScreenState extends State<UsersScreen> {
                     ),
                     child: CachedNetworkImage(
                       imageUrl:
-                          "https://encrypted-tbn0.gstatic.om/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
+                      "https://encrypted-tbn0.gstatic.om/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
                       fit: BoxFit.cover,
                       placeholder: (context, url) => Padding(
                           padding: EdgeInsets.all(10),
@@ -217,12 +217,12 @@ class _UsersScreenState extends State<UsersScreen> {
       builder: (BuildContext context) {
         return AlertDialog(
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(19)),
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(19)),
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.white,
           insetPadding: const EdgeInsets.symmetric(horizontal: 30),
           contentPadding:
-              const EdgeInsets.only(right: 24, left: 24, top: 24, bottom: 0),
+          const EdgeInsets.only(right: 24, left: 24, top: 24, bottom: 0),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [

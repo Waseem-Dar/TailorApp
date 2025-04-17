@@ -9,9 +9,9 @@ import 'package:tailor_book/widgets/date_picker_field.dart';
 import 'package:tailor_book/widgets/measurement_field.dart';
 import 'package:tailor_book/widgets/text_field_widget.dart';
 
-import '../utils/app_color.dart';
-import '../widgets/app_widgets.dart';
-import '../widgets/cards/new_client_images_card.dart';
+import '../../utils/app_color.dart';
+import '../../widgets/app_widgets.dart';
+import '../../widgets/cards/new_client_images_card.dart';
 
 class AddClientScreen extends StatefulWidget {
   const AddClientScreen({super.key});

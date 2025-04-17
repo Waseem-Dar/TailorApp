@@ -4,15 +4,15 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tailor_book/model/gallery_model.dart';
 
-import '../../data/cloth_images.dart';
-import '../../main.dart';
-import '../../utils/app_color.dart';
-import '../../utils/app_icons.dart';
-import '../../widgets/app_widgets.dart';
-import '../../widgets/cards/fabric_card.dart';
-import '../../widgets/cards/gallery_cloth_card.dart';
-import '../../widgets/cards/most_popular_card.dart';
-import '../../widgets/cards/popular_design_card.dart';
+import '../../../data/cloth_images.dart';
+import '../../../main.dart';
+import '../../../utils/app_color.dart';
+import '../../../utils/app_icons.dart';
+import '../../../widgets/cards/fabric_card.dart';
+import '../../../widgets/cards/gallery_cloth_card.dart';
+import '../../../widgets/cards/most_popular_card.dart';
+import '../../../widgets/cards/popular_design_card.dart';
+
 
 class ClientHomeScreen extends StatefulWidget {
   const ClientHomeScreen({super.key});

@@ -5,8 +5,9 @@ import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:tailor_book/view/notification_screen.dart';
 
-import '../../widgets/cards/order_screen_tile_card.dart';
+import '../../../widgets/cards/order_screen_tile_card.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});
@@ -47,7 +48,13 @@ class _OrderScreenState extends State<OrderScreen> {
               Padding(
                 padding: const EdgeInsets.only(right: 8),
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NotificationScreen(),
+                          ));
+                    },
                     icon: ImageIcon(
                       AssetImage(
                         AppIcons.notificationIcon,

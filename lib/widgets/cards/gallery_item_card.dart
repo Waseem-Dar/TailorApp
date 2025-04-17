@@ -1,7 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tailor_book/view/tabs/gallery_screens/gallery_items_screen.dart';
 
 import '../../model/gallery_model.dart';
 import '../../utils/app_color.dart';

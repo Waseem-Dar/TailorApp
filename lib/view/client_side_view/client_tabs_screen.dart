@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:tailor_book/utils/app_color.dart';
 import 'package:tailor_book/utils/app_icons.dart';
-import 'package:tailor_book/view/add_client_screen.dart';
-import 'package:tailor_book/view/client_tabs/tailors_screen.dart';
-import 'package:tailor_book/view/tabs/gallery_screens/gallery_screen.dart';
-import 'package:tailor_book/view/tabs/order_screen.dart';
-import 'package:tailor_book/view/tabs/Reports_screen.dart';
-import 'package:tailor_book/view/tabs/users_screen.dart';
-
+import 'package:tailor_book/view/tailor_side_view/add_client_screen.dart';
 import 'client_tabs/client_home_screen.dart';
 import 'client_tabs/client_orders_screen.dart';
+import 'client_tabs/tailors_screen.dart';
 
 class ClientTabScreen extends StatefulWidget {
   const ClientTabScreen({super.key});
