@@ -245,7 +245,7 @@ class _UsersScreenState extends State<UsersScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                "Are you sure you want to remove this address/location?",
+                "Are you sure you want to remove this client?",
                 style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
