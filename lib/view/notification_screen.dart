@@ -1,6 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_book/view/tailor_side_view/tailor_tabs/Reports_screen.dart';
+import 'package:tailor_book/view/tailor_side_view/user_details_screen.dart';
 
 import '../utils/app_color.dart';
 import '../utils/app_icons.dart';
@@ -15,7 +17,18 @@ class NotificationScreen extends StatefulWidget {
 class _NotificationScreenState extends State<NotificationScreen> {
 
 
-  List notificationList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13, 14, 15];
+  List<Map<String,dynamic>> notificationList = [
+    {"icon":AppIcons.deliveryNotificationIcon,"color":AppColors.orange,"msg":"Deliver your item"},
+    {"icon":AppIcons.cancelNotificationIcon,"color":AppColors.red,"msg":"Cancel your order"},
+    {"icon":AppIcons.paymentNotificationIcon,"color":AppColors.black,"msg":"Payment request"},
+    {"icon":AppIcons.messageNotificationIcon,"color":AppColors.blue,"msg":"Message to you"},
+    {"icon":AppIcons.completeNotificationIcon,"color":AppColors.green,"msg":"Complete your order"},
+    {"icon":AppIcons.deliveryNotificationIcon,"color":AppColors.orange,"msg":"Deliver your item"},
+    {"icon":AppIcons.cancelNotificationIcon,"color":AppColors.red,"msg":"Cancel your order"},
+    {"icon":AppIcons.paymentNotificationIcon,"color":AppColors.black,"msg":"Payment request"},
+    {"icon":AppIcons.messageNotificationIcon,"color":AppColors.blue,"msg":"Message to you"},
+    {"icon":AppIcons.completeNotificationIcon,"color":AppColors.green,"msg":"Complete your order"},
+  ];
 
   Set<int> selectedItems = {}; // Stores selected item indexes
   bool isSelectionMode = false;
@@ -60,19 +73,20 @@ class _NotificationScreenState extends State<NotificationScreen> {
         padding: EdgeInsets.symmetric(vertical: 4),
         itemBuilder: (context, index) {
           bool isSelected = selectedItems.contains(index);
+          final item = notificationList[index];
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             child: ListTile(
               onLongPress: () => toggleSelection(index),
-              // onTap: isSelectionMode
-              //     ? () => toggleSelection(index)
-              //     : () {
-              //   Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //         builder: (context) => UserDetailsScreen(),
-              //       ));
-              // },
+              onTap: isSelectionMode
+                  ? () => toggleSelection(index)
+                  : () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UserDetailsScreen(),
+                    ));
+              },
               tileColor: isSelected
                   ? AppColors.primaryColor2.withOpacity(0.15)
                   : AppColors.background,
@@ -85,23 +99,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 height: 57,
                 width: 57,
                 clipBehavior: Clip.hardEdge,
+                padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppColors.grey2.withOpacity(0.2),
+                  color: item["color"].withOpacity(0.05),
                   shape: BoxShape.circle,
+
                 ),
-                child: CachedNetworkImage(
-                  imageUrl:
-                  "https://encrypted-tbn0.gstatic.om/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) => Padding(
-                      padding: EdgeInsets.all(10),
-                      child: CircularProgressIndicator()),
-                  errorWidget: (context, url, error) => Icon(
-                    Icons.person,
-                    color: AppColors.grey2,
-                    size: 45,
-                  ),
-                ),
+                child: ImageIcon(AssetImage(item["icon"]),color: item["color"].withOpacity(0.5 ),)
               ),
               title: Padding(
                 padding: const EdgeInsets.only(bottom: 5),
@@ -117,7 +121,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'This is a open source and free UI library.',
+                    item["msg"],
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -126,12 +130,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     overflow: TextOverflow.ellipsis,
                   ),
                   Text(
-                    '$index',
+                    'This is a open source and free2 UI library.',
                     style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 13,
                         color: const Color(0xFF6C6C6C)),
                     maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),

@@ -30,6 +30,11 @@ class AppIcons{
   static String homeOutlineIcon = "assets/images/home-outline.png";
   static String circleAddIcon = "assets/images/circle-add-icon.png";
   static String whatsappIcon = "assets/images/whatsapp.png";
+  static String cancelNotificationIcon = "assets/images/cancelNotificationIcon.png";
+  static String completeNotificationIcon = "assets/images/completeNotificationIcon.png";
+  static String deliveryNotificationIcon = "assets/images/deliveryNotificationIcon.png";
+  static String messageNotificationIcon = "assets/images/messageNotificationIcon.png";
+  static String paymentNotificationIcon = "assets/images/paymentNotificationIcon.png";
   static String clothNetworkImage = "https://www.shutterstock.com/image-photo/stack-colorful-clothes-pile-clothing-600nw-2203081765.jpg";
   static String clientNetworkImage = "https://www.saeedajmalstores.com/cdn/shop/files/Men-Wash-n-wear-Kameez-Shalwar-Navy-1_400x.jpg?v=1731903187";
 }
