@@ -19,7 +19,7 @@ class UsersScreen extends StatefulWidget {
 class _UsersScreenState extends State<UsersScreen> {
   List list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13, 14, 15];
 
-  Set<int> selectedItems = {}; // Stores selected item indexes
+  Set<int> selectedItems = {};
   bool isSelectionMode = false;
 
   void toggleSelection(int index) {
@@ -27,10 +27,10 @@ class _UsersScreenState extends State<UsersScreen> {
       if (selectedItems.contains(index)) {
         selectedItems.remove(index);
         if (selectedItems.isEmpty)
-          isSelectionMode = false; // Exit selection mode if none selected
+          isSelectionMode = false;
       } else {
         selectedItems.add(index);
-        isSelectionMode = true; // Activate selection mode
+        isSelectionMode = true;
       }
     });
   }
@@ -180,7 +180,7 @@ class _UsersScreenState extends State<UsersScreen> {
                             child: CircularProgressIndicator()),
                         errorWidget: (context, url, error) => Icon(
                           Icons.person,
-                          color: AppColors.grey2,
+                          color: AppColors.grey2, 
                           size: 45,
                         ),
                       ),

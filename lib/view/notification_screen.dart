@@ -57,97 +57,121 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        backgroundColor: AppColors.primaryColor2,
-        iconTheme: IconThemeData(color: AppColors.white),
-        elevation: 10,
-        title: Text(
-          "Notification",
-          style: GoogleFonts.poppins(color: AppColors.white),
-        ),
-      ),
-      body:ListView.builder(
-        itemCount: notificationList.length,
-        padding: EdgeInsets.symmetric(vertical: 4),
-        itemBuilder: (context, index) {
-          bool isSelected = selectedItems.contains(index);
-          final item = notificationList[index];
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-            child: ListTile(
-              onLongPress: () => toggleSelection(index),
-              onTap: isSelectionMode
-                  ? () => toggleSelection(index)
-                  : () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => UserDetailsScreen(),
-                    ));
-              },
-              tileColor: isSelected
-                  ? AppColors.primaryColor2.withOpacity(0.15)
-                  : AppColors.background,
-
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              contentPadding:
-              EdgeInsets.symmetric(vertical: 0, horizontal: 16),
-              leading: Container(
-                height: 57,
-                width: 57,
-                clipBehavior: Clip.hardEdge,
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: item["color"].withOpacity(0.05),
-                  shape: BoxShape.circle,
-
+    return PopScope(
+      canPop: !isSelectionMode,
+      onPopInvoked: (didPop) {
+        if (!didPop && isSelectionMode) {
+          setState(() {
+            selectedItems.clear();
+            isSelectionMode = false;
+          });
+        }
+      },
+      child: Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          backgroundColor: AppColors.primaryColor2,
+          iconTheme: IconThemeData(color: AppColors.white),
+          elevation: 10,
+          actions: [
+            if(isSelectionMode)Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: IconButton(
+                onPressed: deleteSelectedItems,
+                icon: ImageIcon(
+                  AssetImage(AppIcons.deleteIcon),
+                  color: AppColors.white,
                 ),
-                child: ImageIcon(AssetImage(item["icon"]),color: item["color"].withOpacity(0.5 ),)
-              ),
-              title: Padding(
-                padding: const EdgeInsets.only(bottom: 5),
-                child: Text(
-                  "Sabir Saleem",
-                  style: GoogleFonts.poppins(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black),
-                ),
-              ),
-              subtitle: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    item["msg"],
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12,
-                        color: const Color(0xFF6C6C6C)),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  Text(
-                    'This is a open source and free2 UI library.',
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 13,
-                        color: const Color(0xFF6C6C6C)),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-              trailing: Icon(
-                Icons.arrow_forward_ios,
-                size: 18,
               ),
             ),
-          );
-        },
-      )
+
+          ],
+          title: Text(
+            "Notification",
+            style: GoogleFonts.poppins(color: AppColors.white),
+          ),
+        ),
+        body:ListView.builder(
+          itemCount: notificationList.length,
+          padding: EdgeInsets.symmetric(vertical: 4),
+          itemBuilder: (context, index) {
+            bool isSelected = selectedItems.contains(index);
+            final item = notificationList[index];
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              child: ListTile(
+                onLongPress: () => toggleSelection(index),
+                onTap: isSelectionMode
+                    ? () => toggleSelection(index)
+                    : () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => UserDetailsScreen(),
+                      ));
+                },
+                tileColor: isSelected
+                    ? AppColors.primaryColor2.withOpacity(0.15)
+                    : AppColors.background,
+      
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                contentPadding:
+                EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+                leading: Container(
+                  height: 57,
+                  width: 57,
+                  clipBehavior: Clip.hardEdge,
+                  padding: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: item["color"].withOpacity(0.05),
+                    shape: BoxShape.circle,
+      
+                  ),
+                  child: ImageIcon(AssetImage(item["icon"]),color: item["color"].withOpacity(0.5 ),)
+                ),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 5),
+                  child: Text(
+                    "Sabir Saleem",
+                    style: GoogleFonts.poppins(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black),
+                  ),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      item["msg"],
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 12,
+                          color: const Color(0xFF6C6C6C)),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      'This is a open source and free2 UI library.',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                          color: const Color(0xFF6C6C6C)),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+                trailing: Icon(
+                  Icons.arrow_forward_ios,
+                  size: 18,
+                ),
+              ),
+            );
+          },
+        )
+      ),
     );
   }
 }
