@@ -31,3 +31,38 @@ class GetMonth{
   }
 
 }
+
+// CarouselSlider(
+//   options: CarouselOptions(
+//     height: 150,
+//     aspectRatio: 16 / 9,
+//     viewportFraction: 0.85,
+//     initialPage: 0,
+//     enableInfiniteScroll: true,
+//     reverse: false,
+//     autoPlay: true,
+//     autoPlayInterval: Duration(seconds: 3),
+//     autoPlayAnimationDuration: Duration(milliseconds: 800),
+//     autoPlayCurve: Curves.fastOutSlowIn,
+//     enlargeCenterPage: true,
+//     enlargeFactor: 0.15,
+//     scrollDirection: Axis.horizontal,
+//   ),
+//   items: ClothImages.CarouselSliderImages.map((i) {
+//     return Builder(
+//       builder: (BuildContext context) {
+//         return Container(
+//             clipBehavior: Clip.hardEdge,
+//             width: MediaQuery.of(context).size.width,
+//             margin: EdgeInsets.symmetric(horizontal: 5.0),
+//             decoration: BoxDecoration(
+//                 color: Colors.amber,
+//                 borderRadius: BorderRadius.circular(20)),
+//             child: Image.network(
+//               i,
+//               fit: BoxFit.cover,
+//             ));
+//       },
+//     );
+//   }).toList(),
+// ),

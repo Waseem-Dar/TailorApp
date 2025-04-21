@@ -98,7 +98,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             bool isSelected = selectedItems.contains(index);
             final item = notificationList[index];
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
               child: ListTile(
                 onLongPress: () => toggleSelection(index),
                 onTap: isSelectionMode
@@ -118,6 +118,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                     borderRadius: BorderRadius.circular(10)),
                 contentPadding:
                 EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+                titleAlignment: ListTileTitleAlignment.top,
                 leading: Container(
                   height: 57,
                   width: 57,
@@ -153,19 +154,29 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
-                      'This is a open source and free2 UI library.',
+                      'This is a open source and free 2 UI library.',
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
                           fontSize: 13,
                           color: const Color(0xFF6C6C6C)),
-                      maxLines: 1,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
-                trailing: Icon(
-                  Icons.arrow_forward_ios,
-                  size: 18,
+                trailing: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text("2:54 PM",style: GoogleFonts.poppins( fontWeight: FontWeight.w400,
+                        fontSize: 13,
+                        color: const Color(0xFF6C6C6C)),),
+                    Icon(
+                      Icons.circle,
+                      size: 12,
+                      color: AppColors.primaryColor2,
+                    ),
+                  ],
                 ),
               ),
             );
@@ -175,3 +186,4 @@ class _NotificationScreenState extends State<NotificationScreen> {
     );
   }
 }
+
