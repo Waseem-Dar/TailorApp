@@ -23,7 +23,7 @@ class OrderScreenTileCard extends StatelessWidget {
             color: AppColors.white,
             child: GFListTile(
               onTap: () {
-                // Navigator.push(context, MaterialPageRoute(builder: (context) => OrderDetailsScreen(),));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => OrderDetailsScreen(),));
               },
                 padding: EdgeInsets.only(right: 10),
                 margin: EdgeInsets.zero,
