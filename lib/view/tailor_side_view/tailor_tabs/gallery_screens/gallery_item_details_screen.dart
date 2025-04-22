@@ -28,7 +28,7 @@ class _GalleryItemDetailsScreenState extends State<GalleryItemDetailsScreen> {
       backgroundColor: AppColors.background,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 14),
+        padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 14),
         child: AppWidgets.mainButton("Order", () {},),
       ),
       appBar: AppBar(
@@ -68,7 +68,7 @@ class _GalleryItemDetailsScreenState extends State<GalleryItemDetailsScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

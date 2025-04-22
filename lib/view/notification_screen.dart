@@ -117,7 +117,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
                 contentPadding:
-                EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+                EdgeInsets.symmetric(vertical: 0, horizontal: 12),
                 titleAlignment: ListTileTitleAlignment.top,
                 leading: Container(
                   height: 57,

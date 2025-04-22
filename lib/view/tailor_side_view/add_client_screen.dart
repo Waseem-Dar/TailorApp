@@ -47,7 +47,7 @@ class _AddClientScreenState extends State<AddClientScreen> {
         body: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   AppWidgets.labelText1("Client Details:"),
@@ -171,7 +171,7 @@ class _AddClientScreenState extends State<AddClientScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   SizedBox(

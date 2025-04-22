@@ -90,7 +90,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
           ),
           //  Selecting Date
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -126,7 +126,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
             width: double.infinity,
             // height: 250,
             padding: EdgeInsets.all(14),
-            margin: EdgeInsets.symmetric(horizontal: 24),
+            margin: EdgeInsets.symmetric(horizontal: 20),
             decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(10),

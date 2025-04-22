@@ -18,7 +18,7 @@ class ChoiceScreen extends StatelessWidget {
         child: Container(
           height: height,
           width: double.infinity,
-          padding: EdgeInsets.symmetric(horizontal: 24),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
               gradient: LinearGradient(
                   colors: [AppColors.primaryColor1, AppColors.primaryColor2],

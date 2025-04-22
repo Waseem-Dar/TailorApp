@@ -5,7 +5,7 @@ import 'package:tailor_book/utils/app_icons.dart';
 import 'package:tailor_book/view/tailor_side_view/add_client_screen.dart';
 import 'package:tailor_book/view/tailor_side_view/tailor_tabs/Reports_screen.dart';
 import 'package:tailor_book/view/tailor_side_view/tailor_tabs/gallery_screens/gallery_screen.dart';
-import 'package:tailor_book/view/tailor_side_view/tailor_tabs/order_screen.dart';
+import 'package:tailor_book/view/tailor_side_view/tailor_tabs/orders_screens/order_screen.dart';
 import 'package:tailor_book/view/tailor_side_view/tailor_tabs/users_screen.dart';
 
 

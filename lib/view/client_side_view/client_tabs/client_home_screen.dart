@@ -96,7 +96,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
         body: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 25, 15, 15),
+              padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -124,7 +124,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             // Category Selection
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 26),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Wrap(
                 spacing: 8,
                 children: ClothImages.choiceList.map((choice) {
@@ -156,45 +156,29 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
 
             // Food List - 1
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Icon(
-                    Icons.arrow_back_ios_rounded,
-                    color: AppColors.primaryColor2,
-                    size: 15,
-                  ),
-                  Flexible(
-                    child: SizedBox(
-                      height: 117,
-                      child: ListView.builder(
-                        itemCount: ClothImages.galleryItems.length,
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          final item = ClothImages.galleryItems[index];
-                          return GalleryClothCard(
-                              item: GalleryModel(
-                                  image: item["image"]!, name: item["name"]!),
-                              onTap: () {});
-                        },
-                      ),
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    color: AppColors.primaryColor2,
-                    size: 15,
-                  ),
-                ],
+              padding: const EdgeInsets.symmetric( vertical: 15),
+              child: SizedBox(
+                height: 117,
+                child: ListView.builder(
+                  itemCount: ClothImages.galleryItems.length,
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  padding: EdgeInsets.symmetric(horizontal:16),
+                  itemBuilder: (context, index) {
+                    final item = ClothImages.galleryItems[index];
+                    return GalleryClothCard(
+                        item: GalleryModel(
+                            image: item["image"]!, name: item["name"]!),
+                        onTap: () {});
+                  },
+                ),
               ),
             ),
 
             Container(
               width: double.infinity,
               height: 120,
-              margin: const EdgeInsets.symmetric(horizontal: 24),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(17),
                   image: DecorationImage(
@@ -204,7 +188,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
 
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.fromLTRB(30, 25, 0, 0),
+              padding: const EdgeInsets.fromLTRB(20, 25, 0, 0),
               child: Text(
                 "Fabric for Men's",
                 style: GoogleFonts.poppins(
@@ -221,7 +205,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
               child: SizedBox(
                 height: 120,
                 child: ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   itemCount: ClothImages.fabricImages.length,
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
@@ -237,7 +221,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             ),
 
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 25, 15, 15),
+              padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -265,7 +249,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             SizedBox(
               height: 193,
               child: ListView.builder(
-                padding: const EdgeInsets.only(left: 30, right: 10),
+                padding: const EdgeInsets.only(left: 20, right: 15),
                 itemCount: ClothImages.popularImages.length,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -279,7 +263,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             ),
 
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 25, 15, 15),
+              padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -307,7 +291,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             SizedBox(
               height: 89,
               child: ListView.builder(
-                padding: const EdgeInsets.only(left: 30, right: 10),
+                padding: const EdgeInsets.only(left: 20, right: 15),
                 itemCount: ClothImages.clientShirtImages.length,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -339,7 +323,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             SizedBox(
               height: 111,
               child: ListView.builder(
-                padding: const EdgeInsets.only(left: 30, right: 10),
+                padding: const EdgeInsets.only(left: 20, right: 15),
                 itemCount: ClothImages.bannerImages.length,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
@@ -365,7 +349,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             ),
 
             Padding(
-              padding: const EdgeInsets.fromLTRB(30, 25, 15, 15),
+              padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
               child: Text(
                 "Most Popular",
                 style: GoogleFonts.poppins(
@@ -379,7 +363,7 @@ class _ClientHomeScreenState extends State<ClientHomeScreen> {
             SizedBox(
               height: 78,
               child: ListView.builder(
-                padding: const EdgeInsets.only(left: 30, right: 10),
+                padding: const EdgeInsets.only(left: 20, right: 15),
                 itemCount: ClothImages.mostPopularImages.length,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,

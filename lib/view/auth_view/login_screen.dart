@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
           body: SingleChildScrollView(
             child: AuthScreenWidget(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
                     Text("Welcome Back!",

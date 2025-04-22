@@ -63,17 +63,17 @@ double animateFrom=40;
               shrinkWrap:true ,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 24.0,
-                mainAxisSpacing: 24.0,
+                crossAxisSpacing: 20.0,
+                mainAxisSpacing: 20.0,
                 childAspectRatio: 1.0,
               ),
               itemCount: ClothImages.galleryItems.length,
-              padding:const EdgeInsets.symmetric(horizontal: 24,vertical: 24),
+              padding:const EdgeInsets.all( 20),
               itemBuilder: (BuildContext context, int index) {
                 final item = ClothImages.galleryItems[index];
                 return InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => GalleryItemsScreen(name:item["image"]!,),));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => GalleryItemsScreen(name:item["name"]!,),));
                     },
                     child: GalleryItemCard(item: GalleryModel(image:item["image"]! , name: item["name"]!),index: index,));
               },

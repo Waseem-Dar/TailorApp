@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/list_tile/gf_list_tile.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_book/view/tailor_side_view/tailor_tabs/orders_screens/order_details_screen.dart';
 
 import '../../utils/app_color.dart';
 
@@ -22,7 +23,7 @@ class OrderScreenTileCard extends StatelessWidget {
             color: AppColors.white,
             child: GFListTile(
               onTap: () {
-
+                // Navigator.push(context, MaterialPageRoute(builder: (context) => OrderDetailsScreen(),));
               },
                 padding: EdgeInsets.only(right: 10),
                 margin: EdgeInsets.zero,
@@ -34,24 +35,24 @@ class OrderScreenTileCard extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(12),
                           bottomLeft: Radius.circular(12))),
-                  child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",fit: BoxFit.cover,),
-                  // child: CachedNetworkImage(
-                  //   imageUrl:
-                  //   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
-                  //   width: 80,
-                  //   height: 80,
-                  //   fit: BoxFit.cover,
-                  //   placeholder: (context, url) => Padding(
-                  //     padding: const EdgeInsets.all(25.0),
-                  //     child: CircularProgressIndicator(),
-                  //   ),
-                  //   errorWidget: (context, url, error) => Container(
-                  //       color: AppColors.grey2.withOpacity(0.2),
-                  //       child: Icon(
-                  //         Icons.error,
-                  //         color:  AppColors.red,
-                  //       )),
-                  // ),
+                  // child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",fit: BoxFit.cover,),
+                  child: CachedNetworkImage(
+                    imageUrl:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO1kJt8LJRx4M1ZiMX0p3x7ScJ0vJzizJeAoPw-NY4LXQUvYbhYetcqweLkHUyI1CqJKs&usqp=CAU",
+                    width: 80,
+                    height: 80,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) => Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: CircularProgressIndicator(),
+                    ),
+                    errorWidget: (context, url, error) => Container(
+                        color: AppColors.grey2.withOpacity(0.2),
+                        child: Icon(
+                          Icons.error,
+                          color:  AppColors.red,
+                        )),
+                  ),
                 ),
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 5),

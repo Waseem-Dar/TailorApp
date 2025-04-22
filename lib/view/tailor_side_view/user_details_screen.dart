@@ -151,7 +151,7 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                                                          // Orders List
                       child: ListView.builder(
                         itemCount: 15,
-                        padding: EdgeInsets.all(24),
+                        padding: EdgeInsets.all(20),
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8),

@@ -162,7 +162,8 @@ class _UsersScreenState extends State<UsersScreen> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     contentPadding:
-                        EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+                        EdgeInsets.only(left: 11,right: 6),
+                    horizontalTitleGap: 14,
                     leading: Container(
                       height: 57,
                       width: 57,

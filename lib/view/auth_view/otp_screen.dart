@@ -21,7 +21,7 @@ class _OTPScreenState extends State<OTPScreen> {
       child: Scaffold(
         body: AuthScreenWidget(
             child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               Text("OTP verification",

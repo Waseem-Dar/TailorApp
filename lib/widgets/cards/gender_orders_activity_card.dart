@@ -16,7 +16,7 @@ class GenderOrdersActivityCard extends StatelessWidget {
       height: 450,
       width: double.infinity,
       padding: const EdgeInsets.all(14),
-      margin: const EdgeInsets.symmetric(horizontal: 24),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(10),
